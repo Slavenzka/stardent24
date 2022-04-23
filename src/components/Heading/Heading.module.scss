@@ -1,0 +1,21 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.title {
+  @include h1(var(--color-font-main));
+
+  margin: 0;
+}
+
+.titleStandard {
+  @include h2(var(--color-font-main));
+
+  margin: 0;
+}
+
+@media (min-width: $widthTabletMin) and (max-width: $widthDesktopMin) {
+  .titleStandard {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+}

@@ -1,0 +1,48 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.header {
+  position: relative;
+  background-color: $colorMainBg;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-font-main);
+    opacity: 0.1;
+  }
+
+  .desktopWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.4rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .iconSearch,
+  .iconBurger {
+    display: none;
+  }
+
+  .logo {
+    display: block;
+    margin-right: 8.4rem;
+  }
+
+  .iconLogo {
+    width: 14.4rem;
+    fill: var(--color-font-main);
+  }
+
+  .btnRegister {
+    display: block;
+    margin-left: 8.3rem;
+    width: 21.7rem;
+  }
+}

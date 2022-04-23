@@ -1,0 +1,82 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.container {
+  position: relative;
+  padding-top: 9.2rem;
+  padding-bottom: 11rem;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40rem;
+    background-color: var(--color-highlight-lightest);
+  }
+
+  :global {
+    div.swiper-pagination {
+      display: none;
+    }
+  }
+}
+
+.slider {
+  margin-top: 6.2rem;
+
+  :global {
+    .slider-fractions {
+      display: none;
+    }
+  }
+}
+
+.slideWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.item {
+  &:not(:last-of-type) {
+    margin-right: 10.2rem;
+  }
+}
+
+.previewImage {
+  width: 100%;
+  height: 38.9rem;
+  object-fit: cover;
+}
+
+.trigger {
+  @include resetButton;
+
+  display: block;
+  width: 26.6rem;
+  cursor: pointer;
+
+  &:hover {
+    .label {
+      color: var(--color-highlight-buttons);
+    }
+  }
+}
+
+.label {
+  @include regularTabletScaling(var(--color-font-main));
+
+  display: block;
+  margin-top: 2rem;
+  text-align: left;
+  transition-duration: 0.3s;
+  transition-property: color;
+}
+
+.fullImage {
+  max-width: 100%;
+  max-height: 80vh;
+}

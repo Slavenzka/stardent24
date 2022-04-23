@@ -1,0 +1,65 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  margin-left: -1.5rem;
+  padding-left: 1.5rem;
+  width: calc(100% + 1.5rem * 2);
+  overflow: scroll;
+}
+
+.list {
+  @include resetList;
+
+  display: flex;
+  align-items: flex-start;
+  width: max-content;
+}
+
+.item {
+  @include small(var(--color-font-main));
+
+  &:not(:last-child) {
+    position: relative;
+    margin-right: 2.6rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 0.8rem / 2);
+      right: calc(-0.4rem - 1.1rem);
+      width: 0.4rem;
+      height: 0.8rem;
+      background-image: url("../../assets/icons/breadcrumbs__separator.svg");
+      background-size: cover;
+    }
+  }
+
+  &:last-child {
+    opacity: 0.5;
+    padding-right: 1.5rem;
+  }
+
+  .link {
+    color: inherit;
+  }
+}
+
+@media (min-width: $widthTabletMin) {
+  .wrapper {
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .list {
+    width: 100%;
+  }
+
+  .item {
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

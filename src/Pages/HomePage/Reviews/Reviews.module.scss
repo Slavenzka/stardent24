@@ -1,0 +1,133 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.container {
+  padding-top: 10.1rem;
+  padding-bottom: 1rem;
+
+  .slider {
+    margin-top: 6.2rem;
+
+    :global {
+      .swiper-container {
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+      }
+
+      .swiper-slide {
+        width: 100%;
+        height: auto;
+
+        &:not(:last-of-type) {
+          margin-right: 0;
+        }
+      }
+
+      .swiper-pagination {
+        margin-left: 7.5rem;
+        width: 129.5rem;
+      }
+    }
+  }
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4.4rem 6rem 4.5rem 5rem;
+  height: 100%;
+  background-color: var(--color-highlight-lightest);
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.name,
+.date,
+.text {
+  color: var(--color-font-main);
+}
+
+.name,
+.date {
+  @include h6(var(--color-font-main));
+
+  display: inline-block;
+  margin: 0;
+}
+
+.date {
+  margin: 0 0 0 0.7rem;
+}
+
+.text {
+  @include regular(var(--color-font-main));
+
+  margin: 1.6rem 0 1.4rem 0;
+}
+
+.btn {
+  @include resetButton;
+  @include capitals-bold($colorMainBg);
+  @include colorButtonBehavior;
+
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.specialist {
+  @include capitals-bold-small($colorMainBg);
+
+  margin-top: 4.4rem;
+  color: var(--color-font-main);
+  opacity: 0.5;
+
+  & + .specialist {
+    margin-top: 0.9rem;
+  }
+
+  &.specialistAuto {
+    margin-top: auto;
+  }
+}
+
+.btnPlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  width: 100%;
+  height: 67.2rem;
+  object-fit: cover;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slideModal {
+  display: block;
+
+  .text {
+    max-height: 100%;
+    overflow: hidden;
+  }
+}

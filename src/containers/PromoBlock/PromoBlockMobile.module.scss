@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.title {
+  @include h2(var(--color-font-main));
+
+  margin: 0;
+}
+
+.promo {
+  margin-top: 2.3rem;
+}
+
+@media (min-width: $widthTabletMin) {
+  .promo {
+    margin-top: 1.5rem;
+  }
+}

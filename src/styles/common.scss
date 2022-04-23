@@ -1,0 +1,51 @@
+@import "mixins";
+@import "fonts";
+@import "variables";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: $colorMainBg;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-font-main);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  font-size: 0;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 0.7rem !important;
+
+  .simplebar-scrollbar {
+    &::before {
+      background-color: var(--color-font-main);
+      border-radius: 0;
+    }
+  }
+}

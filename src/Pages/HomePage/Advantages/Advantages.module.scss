@@ -1,0 +1,43 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.container {
+  padding-top: 10rem;
+}
+
+.subtitle {
+  @include capitals-bold(var(--color-font-main));
+
+  margin: 0;
+}
+
+.descriptor {
+  @include regular(var(--color-font-main));
+
+  margin: 0.7rem 0 0 0;
+}
+
+.list {
+  @include resetList;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem 6.4rem;
+  margin-top: 4.7rem;
+  counter-reset: advCards;
+}
+
+.item {
+  position: relative;
+  margin-top: 6rem;
+
+  &::before {
+    counter-increment: advCards;
+    content: counter(advCards, decimal-leading-zero);
+    position: absolute;
+    top: -6rem;
+    left: 0;
+    @include h0(var(--color-highlight-lightest));
+    z-index: -1;
+  }
+}
