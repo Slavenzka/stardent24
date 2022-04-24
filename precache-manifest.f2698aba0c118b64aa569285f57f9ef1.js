@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3b4761c0fecc9d144f5e8df072ae94ed",
+    "revision": "ddab7539b91346e21fe4b7068f3937bb",
     "url": "/stardent24/index.html"
   },
   {
-    "revision": "6443790b65634a43d147",
+    "revision": "f39356469bde51ed99e4",
     "url": "/stardent24/static/css/2.0016a719.chunk.css"
   },
   {
-    "revision": "9bf12a5c5b4549dc352f",
-    "url": "/stardent24/static/css/main.07de3721.chunk.css"
+    "revision": "bde52b3c808aa4774dd5",
+    "url": "/stardent24/static/css/main.c114a87a.chunk.css"
   },
   {
-    "revision": "6443790b65634a43d147",
-    "url": "/stardent24/static/js/2.2b4bd815.chunk.js"
+    "revision": "f39356469bde51ed99e4",
+    "url": "/stardent24/static/js/2.45b37e9d.chunk.js"
   },
   {
     "revision": "bfd0f9ef773c39bd68987561c36447e9",
-    "url": "/stardent24/static/js/2.2b4bd815.chunk.js.LICENSE.txt"
+    "url": "/stardent24/static/js/2.45b37e9d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9bf12a5c5b4549dc352f",
-    "url": "/stardent24/static/js/main.db2efa9d.chunk.js"
+    "revision": "bde52b3c808aa4774dd5",
+    "url": "/stardent24/static/js/main.4f38a02f.chunk.js"
   },
   {
     "revision": "e287cfe0332239252dca",
@@ -102,6 +102,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "64a0c232ac50e5243367aa884a590528",
     "url": "/stardent24/static/media/breadcrumbs__separator.64a0c232.svg"
+  },
+  {
+    "revision": "609f1687d2b9e93b08d04093db9d19cf",
+    "url": "/stardent24/static/media/certificate-1.609f1687.jpg"
+  },
+  {
+    "revision": "3d2dbcb85ef9ed575a30020cbcd75ca9",
+    "url": "/stardent24/static/media/certificate-2.3d2dbcb8.jpg"
+  },
+  {
+    "revision": "36cda8fc9205cee2f2def8e6b0b1e97a",
+    "url": "/stardent24/static/media/certificate-3.36cda8fc.jpg"
+  },
+  {
+    "revision": "fb7ff80eab96b26155790d1b3d396e55",
+    "url": "/stardent24/static/media/certificate-3.fb7ff80e.png"
   },
   {
     "revision": "dbd1662458dc8fe0af17f65f1bc20806",
@@ -376,8 +392,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stardent24/static/media/review__video-preview--1.639604aa.jpg"
   },
   {
-    "revision": "f25de48555c4ca30d4639cc6a3f9635c",
-    "url": "/stardent24/static/media/review__video-preview--2.f25de485.jpg"
+    "revision": "79c6b787c7c6a61b8131980803feeeed",
+    "url": "/stardent24/static/media/review__video-preview--2.79c6b787.jpg"
   },
   {
     "revision": "20114aef1f97182cd875c898643d88b2",
@@ -450,5 +466,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ac9e60851c6b80cda38f6c0be4760cf3",
     "url": "/stardent24/static/media/video-banner__video.ac9e6085.mp4"
+  },
+  {
+    "revision": "4513602d34146de0493efbbca6e39211",
+    "url": "/stardent24/static/media/video-capture-9183.4513602d.png"
   }
 ]);

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/stardent24/precache-manifest.6a50e93df878ad0578b59d9992e8bc79.js"
+  "/stardent24/precache-manifest.f2698aba0c118b64aa569285f57f9ef1.js"
 );
 
 self.addEventListener('message', (event) => {
