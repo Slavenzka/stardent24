@@ -1,31 +1,111 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ddbfc183ff37103e137d0b477c7d7a8",
+    "revision": "fae23452b1a4dcc56a038bae809a3dc5",
     "url": "/stardent24/index.html"
   },
   {
-    "revision": "86de50aa1ad828a83535",
+    "revision": "d738a7ee5ba99ca71a4b",
     "url": "/stardent24/static/css/2.0016a719.chunk.css"
   },
   {
-    "revision": "6dd63d30670acb2dafe9",
-    "url": "/stardent24/static/css/main.7f8f573d.chunk.css"
+    "revision": "6b4c33d03c2775d3e001",
+    "url": "/stardent24/static/css/main.ff8c84c8.chunk.css"
   },
   {
-    "revision": "86de50aa1ad828a83535",
-    "url": "/stardent24/static/js/2.90ca4379.chunk.js"
+    "revision": "d738a7ee5ba99ca71a4b",
+    "url": "/stardent24/static/js/2.ae4b8a4f.chunk.js"
   },
   {
     "revision": "bfd0f9ef773c39bd68987561c36447e9",
-    "url": "/stardent24/static/js/2.90ca4379.chunk.js.LICENSE.txt"
+    "url": "/stardent24/static/js/2.ae4b8a4f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6dd63d30670acb2dafe9",
-    "url": "/stardent24/static/js/main.885441b4.chunk.js"
+    "revision": "6b4c33d03c2775d3e001",
+    "url": "/stardent24/static/js/main.daa82178.chunk.js"
   },
   {
     "revision": "e287cfe0332239252dca",
     "url": "/stardent24/static/js/runtime-main.a3fff904.js"
+  },
+  {
+    "revision": "92a0a3868eb778dab06563624d8f88e7",
+    "url": "/stardent24/static/media/1.92a0a386.jpg"
+  },
+  {
+    "revision": "15f2e519d6d759d70902e90bb07e8779",
+    "url": "/stardent24/static/media/10.15f2e519.jpg"
+  },
+  {
+    "revision": "7a6a47a0672cdcec8b0e5428eab2bde2",
+    "url": "/stardent24/static/media/11.7a6a47a0.jpg"
+  },
+  {
+    "revision": "fb5e46633e1cd62ca5c671ea71f24400",
+    "url": "/stardent24/static/media/12.fb5e4663.jpg"
+  },
+  {
+    "revision": "1a33f06caf0315079fbde9ec73d74af7",
+    "url": "/stardent24/static/media/13.1a33f06c.jpg"
+  },
+  {
+    "revision": "5983c2ca65451e15d1facef388384691",
+    "url": "/stardent24/static/media/14.5983c2ca.jpg"
+  },
+  {
+    "revision": "60ad94fca867ee1524792f3cba0e7284",
+    "url": "/stardent24/static/media/15.60ad94fc.jpg"
+  },
+  {
+    "revision": "c0fec6bcd20973520b81af966af9b8ec",
+    "url": "/stardent24/static/media/16.c0fec6bc.jpg"
+  },
+  {
+    "revision": "0b61b57e3f929fb4fbae5d73450d21e6",
+    "url": "/stardent24/static/media/17.0b61b57e.jpg"
+  },
+  {
+    "revision": "c98f23f344d6ae83f4b30e94a13dab15",
+    "url": "/stardent24/static/media/18.c98f23f3.jpg"
+  },
+  {
+    "revision": "a3c309f67960237ac9f6a8d781f5b9bf",
+    "url": "/stardent24/static/media/19.a3c309f6.jpg"
+  },
+  {
+    "revision": "1b1f2d1b6f05f4c89e6312e15e29cd93",
+    "url": "/stardent24/static/media/2.1b1f2d1b.jpg"
+  },
+  {
+    "revision": "b5e0acc05be0633ef2d9eaf0d40f106d",
+    "url": "/stardent24/static/media/20.b5e0acc0.jpg"
+  },
+  {
+    "revision": "1bb2e9ec5789f51543534a11fb7c13ae",
+    "url": "/stardent24/static/media/3.1bb2e9ec.jpg"
+  },
+  {
+    "revision": "b1a991714f15fe208f8448613ecc4ba5",
+    "url": "/stardent24/static/media/4.b1a99171.jpg"
+  },
+  {
+    "revision": "1ff17b1f5e1f932ed76f1d02b19c4078",
+    "url": "/stardent24/static/media/5.1ff17b1f.jpg"
+  },
+  {
+    "revision": "da551769da6a3cd3ae14301e368bfa7c",
+    "url": "/stardent24/static/media/6.da551769.jpg"
+  },
+  {
+    "revision": "ba2700fa8c46869485ce99a3ff51aae0",
+    "url": "/stardent24/static/media/7.ba2700fa.jpg"
+  },
+  {
+    "revision": "ccd8cf9ff5f20c01151fc03c6e14a8b1",
+    "url": "/stardent24/static/media/8.ccd8cf9f.jpg"
+  },
+  {
+    "revision": "e4fc0671c74bb744fbc6d9830e270013",
+    "url": "/stardent24/static/media/9.e4fc0671.jpg"
   },
   {
     "revision": "242780083d90e494fa8a5f41a6a4d2cd",
@@ -440,12 +520,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stardent24/static/media/stardend24-prices__bg.d17bf53d.jpg"
   },
   {
+    "revision": "da4ab81310db05feb52be6e14fc8f372",
+    "url": "/stardent24/static/media/stardend24-special__bg--1.da4ab813.jpg"
+  },
+  {
+    "revision": "1af45ba313b76aef946742dfd21c6eff",
+    "url": "/stardent24/static/media/stardend24-special__image--1.1af45ba3.jpg"
+  },
+  {
     "revision": "92f2d2c482c92aafd454f6a895483faa",
     "url": "/stardent24/static/media/stardent-review__blank.92f2d2c4.jpg"
   },
   {
+    "revision": "2d2d64b867e1a840aa515ba8c62b8ecf",
+    "url": "/stardent24/static/media/stardent24__doctors-banner.2d2d64b8.jpg"
+  },
+  {
     "revision": "84065742a7bd3df692251dd7d8f360e4",
     "url": "/stardent24/static/media/stardent24__review-banner.84065742.jpg"
+  },
+  {
+    "revision": "823386a4386e7bd2d879ff993bdde5ab",
+    "url": "/stardent24/static/media/stardent24__specials-banner.823386a4.jpg"
   },
   {
     "revision": "5364c03e0c323a1aff906821fa12dce5",
