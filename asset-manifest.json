@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/stardent24/static/css/main.c114a87a.chunk.css",
-    "main.js": "/stardent24/static/js/main.4f38a02f.chunk.js",
-    "main.js.map": "/stardent24/static/js/main.4f38a02f.chunk.js.map",
+    "main.css": "/stardent24/static/css/main.7f8f573d.chunk.css",
+    "main.js": "/stardent24/static/js/main.885441b4.chunk.js",
+    "main.js.map": "/stardent24/static/js/main.885441b4.chunk.js.map",
     "runtime-main.js": "/stardent24/static/js/runtime-main.a3fff904.js",
     "runtime-main.js.map": "/stardent24/static/js/runtime-main.a3fff904.js.map",
     "static/css/2.0016a719.chunk.css": "/stardent24/static/css/2.0016a719.chunk.css",
-    "static/js/2.45b37e9d.chunk.js": "/stardent24/static/js/2.45b37e9d.chunk.js",
-    "static/js/2.45b37e9d.chunk.js.map": "/stardent24/static/js/2.45b37e9d.chunk.js.map",
+    "static/js/2.90ca4379.chunk.js": "/stardent24/static/js/2.90ca4379.chunk.js",
+    "static/js/2.90ca4379.chunk.js.map": "/stardent24/static/js/2.90ca4379.chunk.js.map",
     "index.html": "/stardent24/index.html",
-    "precache-manifest.f2698aba0c118b64aa569285f57f9ef1.js": "/stardent24/precache-manifest.f2698aba0c118b64aa569285f57f9ef1.js",
+    "precache-manifest.a6dd94778f168cf61baadf2665a68a2d.js": "/stardent24/precache-manifest.a6dd94778f168cf61baadf2665a68a2d.js",
     "service-worker.js": "/stardent24/service-worker.js",
     "static/css/2.0016a719.chunk.css.map": "/stardent24/static/css/2.0016a719.chunk.css.map",
-    "static/css/main.c114a87a.chunk.css.map": "/stardent24/static/css/main.c114a87a.chunk.css.map",
-    "static/js/2.45b37e9d.chunk.js.LICENSE.txt": "/stardent24/static/js/2.45b37e9d.chunk.js.LICENSE.txt",
+    "static/css/main.7f8f573d.chunk.css.map": "/stardent24/static/css/main.7f8f573d.chunk.css.map",
+    "static/js/2.90ca4379.chunk.js.LICENSE.txt": "/stardent24/static/js/2.90ca4379.chunk.js.LICENSE.txt",
     "static/media/common.scss": "/stardent24/static/media/Montserrat-Regular.23488bf2.woff2",
     "static/media/about__banner@desktop.jpg": "/stardent24/static/media/about__banner@desktop.9d99a21a.jpg",
     "static/media/about__fullscreen@desktop.jpg": "/stardent24/static/media/about__fullscreen@desktop.4b7a3444.jpg",
@@ -109,11 +109,13 @@
     "static/media/special__image@desktop.jpg": "/stardent24/static/media/special__image@desktop.56520b01.jpg",
     "static/media/special__image@tablet.jpg": "/stardent24/static/media/special__image@tablet.87d08a44.jpg",
     "static/media/specials__banner@desktop.jpg": "/stardent24/static/media/specials__banner@desktop.aa03a353.jpg",
+    "static/media/stardend24-prices__bg.jpg": "/stardent24/static/media/stardend24-prices__bg.d17bf53d.jpg",
     "static/media/stardent-review__blank.jpg": "/stardent24/static/media/stardent-review__blank.92f2d2c4.jpg",
     "static/media/stardent24__review-banner.jpg": "/stardent24/static/media/stardent24__review-banner.84065742.jpg",
     "static/media/test-banner__img.png": "/stardent24/static/media/test-banner__img.5364c03e.png",
     "static/media/tinified.zip": "/stardent24/static/media/tinified.b4fba40e.zip",
     "static/media/vacancies__banner@desktop.jpg": "/stardent24/static/media/vacancies__banner@desktop.6e1da3ba.jpg",
+    "static/media/video-banner__preview--adaptive.jpg": "/stardent24/static/media/video-banner__preview--adaptive.85e16a20.jpg",
     "static/media/video-banner__preview.jpg": "/stardent24/static/media/video-banner__preview.dc46e113.jpg",
     "static/media/video-banner__video--modal.mp4": "/stardent24/static/media/video-banner__video--modal.28ca363d.mp4",
     "static/media/video-banner__video.mp4": "/stardent24/static/media/video-banner__video.ac9e6085.mp4",
@@ -122,8 +124,8 @@
   "entrypoints": [
     "static/js/runtime-main.a3fff904.js",
     "static/css/2.0016a719.chunk.css",
-    "static/js/2.45b37e9d.chunk.js",
-    "static/css/main.c114a87a.chunk.css",
-    "static/js/main.4f38a02f.chunk.js"
+    "static/js/2.90ca4379.chunk.js",
+    "static/css/main.7f8f573d.chunk.css",
+    "static/js/main.885441b4.chunk.js"
   ]
 }

@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ddab7539b91346e21fe4b7068f3937bb",
+    "revision": "5ddbfc183ff37103e137d0b477c7d7a8",
     "url": "/stardent24/index.html"
   },
   {
-    "revision": "f39356469bde51ed99e4",
+    "revision": "86de50aa1ad828a83535",
     "url": "/stardent24/static/css/2.0016a719.chunk.css"
   },
   {
-    "revision": "bde52b3c808aa4774dd5",
-    "url": "/stardent24/static/css/main.c114a87a.chunk.css"
+    "revision": "6dd63d30670acb2dafe9",
+    "url": "/stardent24/static/css/main.7f8f573d.chunk.css"
   },
   {
-    "revision": "f39356469bde51ed99e4",
-    "url": "/stardent24/static/js/2.45b37e9d.chunk.js"
+    "revision": "86de50aa1ad828a83535",
+    "url": "/stardent24/static/js/2.90ca4379.chunk.js"
   },
   {
     "revision": "bfd0f9ef773c39bd68987561c36447e9",
-    "url": "/stardent24/static/js/2.45b37e9d.chunk.js.LICENSE.txt"
+    "url": "/stardent24/static/js/2.90ca4379.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bde52b3c808aa4774dd5",
-    "url": "/stardent24/static/js/main.4f38a02f.chunk.js"
+    "revision": "6dd63d30670acb2dafe9",
+    "url": "/stardent24/static/js/main.885441b4.chunk.js"
   },
   {
     "revision": "e287cfe0332239252dca",
@@ -436,6 +436,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stardent24/static/media/specials__banner@desktop.aa03a353.jpg"
   },
   {
+    "revision": "d17bf53d2e17dd41e6e62cd0c57a5ca6",
+    "url": "/stardent24/static/media/stardend24-prices__bg.d17bf53d.jpg"
+  },
+  {
     "revision": "92f2d2c482c92aafd454f6a895483faa",
     "url": "/stardent24/static/media/stardent-review__blank.92f2d2c4.jpg"
   },
@@ -454,6 +458,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6e1da3bad504021af69722c845b7ed1f",
     "url": "/stardent24/static/media/vacancies__banner@desktop.6e1da3ba.jpg"
+  },
+  {
+    "revision": "85e16a20e4baeabf5c8b822a766079e9",
+    "url": "/stardent24/static/media/video-banner__preview--adaptive.85e16a20.jpg"
   },
   {
     "revision": "dc46e11344286c2ab95c73ce5c4555bd",
