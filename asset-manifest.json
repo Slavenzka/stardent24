@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/stardent24/static/css/main.ff8c84c8.chunk.css",
-    "main.js": "/stardent24/static/js/main.daa82178.chunk.js",
-    "main.js.map": "/stardent24/static/js/main.daa82178.chunk.js.map",
+    "main.js": "/stardent24/static/js/main.8cf87468.chunk.js",
+    "main.js.map": "/stardent24/static/js/main.8cf87468.chunk.js.map",
     "runtime-main.js": "/stardent24/static/js/runtime-main.a3fff904.js",
     "runtime-main.js.map": "/stardent24/static/js/runtime-main.a3fff904.js.map",
     "static/css/2.0016a719.chunk.css": "/stardent24/static/css/2.0016a719.chunk.css",
     "static/js/2.ae4b8a4f.chunk.js": "/stardent24/static/js/2.ae4b8a4f.chunk.js",
     "static/js/2.ae4b8a4f.chunk.js.map": "/stardent24/static/js/2.ae4b8a4f.chunk.js.map",
     "index.html": "/stardent24/index.html",
-    "precache-manifest.885fe399bdebb11d5bb01d2983b5137d.js": "/stardent24/precache-manifest.885fe399bdebb11d5bb01d2983b5137d.js",
+    "precache-manifest.90ab1fdcbb525ca08604743ef8da4d74.js": "/stardent24/precache-manifest.90ab1fdcbb525ca08604743ef8da4d74.js",
     "service-worker.js": "/stardent24/service-worker.js",
     "static/css/2.0016a719.chunk.css.map": "/stardent24/static/css/2.0016a719.chunk.css.map",
     "static/css/main.ff8c84c8.chunk.css.map": "/stardent24/static/css/main.ff8c84c8.chunk.css.map",
@@ -150,6 +150,6 @@
     "static/css/2.0016a719.chunk.css",
     "static/js/2.ae4b8a4f.chunk.js",
     "static/css/main.ff8c84c8.chunk.css",
-    "static/js/main.daa82178.chunk.js"
+    "static/js/main.8cf87468.chunk.js"
   ]
 }
