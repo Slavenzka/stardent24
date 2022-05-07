@@ -20,7 +20,7 @@ const SpecialsList = ({
       <ul className={classnames(css.list, className)}>
         { items }
       </ul>
-      <ButtonShowMore className={css.buttonMore} />
+      {/*<ButtonShowMore className={css.buttonMore} />*/}
     </section>
   )
 }

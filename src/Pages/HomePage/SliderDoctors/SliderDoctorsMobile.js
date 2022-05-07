@@ -84,7 +84,7 @@ const SliderDoctorsMobile = ({ title, list }) => {
             className={css.btnAll}
             url={item.url}
             btnStyle='decorated'
-            label='Подробнее о враче'
+            label='Все врачи'
             handleClick={() => {}}
           />
         </figcaption>

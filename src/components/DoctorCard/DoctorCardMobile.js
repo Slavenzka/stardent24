@@ -21,10 +21,12 @@ const DoctorCardMobile = ({
         <figcaption>
           <p className={css.name} dangerouslySetInnerHTML={{ __html: name }} />
           <p className={css.expertise} dangerouslySetInnerHTML={{ __html: expertise }} />
-          <p className={css.location}>
-            { isBranchOffice ? 'Филиал: ' : '' }
-            { `${region} ${location}` }
-          </p>
+          {location && (
+            <p className={css.location}>
+              {isBranchOffice ? 'Филиал: ' : ''}
+              {`${region} ${location}`}
+            </p>
+          )}
         </figcaption>
       </figure>
     </Link>

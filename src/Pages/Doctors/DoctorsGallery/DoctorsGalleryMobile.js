@@ -39,7 +39,6 @@ const DoctorsGalleryMobile = ({
         <ul className={css.list}>
           { items }
         </ul>
-        <ButtonShowMore className={css.buttonMore} clickHandler={() => {}} />
       </>
     )
     : (

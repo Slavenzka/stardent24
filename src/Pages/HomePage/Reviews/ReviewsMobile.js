@@ -8,6 +8,7 @@ import ButtonPlayMobile from 'components/ButtonPlay/ButtonPlayMobile'
 import ContainerMobile from 'components/Grid/ContainerMobile'
 import SliderCardsMobile from 'components/SliderCards/SliderCardsMobile'
 import ModalMobile from 'components/Modal/ModalMobile'
+import imageBlank from 'assets/images/stardent-review__blank.jpg'
 
 const ReviewsMobile = ({ title, list }) => {
   const [modal, setModalStatus] = useState({
@@ -114,7 +115,7 @@ const ReviewsMobile = ({ title, list }) => {
           />
          }
           {!slide.video && !modal &&
-            <img src={images('./' + slide.preview)} className={css.img} alt='Фотография респондента' />
+            <img src={imageBlank} className={css.img} alt='Фотография респондента' />
           }
         </div>
       )

@@ -2,7 +2,23 @@
 @import "styles/mixins";
 
 .wrapper {
+  position: relative;
   background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-highlight-mosaic);
+    opacity: 0.6;
+  }
+
+  & > * {
+    position: relative;
+  }
 }
 
 .container {

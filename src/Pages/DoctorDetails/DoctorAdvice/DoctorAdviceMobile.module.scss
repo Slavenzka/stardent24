@@ -35,9 +35,26 @@
 .slide {
   display: flex;
   align-items: flex-start;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5rem;
+    left: 3rem;
+    width: 43rem;
+    height: 35.1rem;
+    background-image: url("../../../assets/icons/doctor__photo-bg.svg");
+    background-size: cover;
+  }
 }
 
 .photo {
+  position: relative;
   width: 100%;
   height: 27rem;
   object-fit: cover;

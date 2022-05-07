@@ -19,13 +19,14 @@ const SliderCards = ({
   const [activeIndex, setActiveIndex] = useState(0)
   const [totalSlides, setTotalSlides] = useState(0)
   const [swiper, setSwiper] = useState(null)
+  const areControlsRequired = swiper && swiper.slides.length > 1
 
   const goNext = () => {
     if (swiper) {
       swiper.slideNext()
     }
   }
-
+  
   const goPrev = () => {
     if (swiper) {
       if (swiper) swiper.slidePrev()
@@ -90,7 +91,7 @@ const SliderCards = ({
           }
         </div>
       }
-      {(controlsType === 'styled' || controlsType === 'styledNoFractions') &&
+      {(controlsType === 'styled' || controlsType === 'styledNoFractions') && areControlsRequired &&
         <div className={classnames(css.buttonsStyled, 'swiper-controls')}>
           <ButtonSlider type='prev' className={css.btnStyled} handleClick={goPrev} isDisabled={swiper && swiper.isBeginning} />
           <ButtonSlider  className={css.btnStyled} handleClick={goNext} isDisabled={swiper && swiper.isEnd} />

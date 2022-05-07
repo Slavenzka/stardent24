@@ -8,6 +8,8 @@
 
 .tabs {
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 3.5rem;
 
   &::before {
@@ -27,7 +29,7 @@
 
   position: relative;
   padding: 2.5rem;
-  width: 45.6rem;
+  width: 100%;
   transition-duration: 0.15s;
   opacity: 0.5;
   cursor: pointer;
@@ -93,13 +95,20 @@
   grid-gap: 1rem;
 }
 
-.subitem {
+.link {
   @include regular(var(--color-font-main));
 
   display: flex;
   align-items: center;
   padding: 2rem 4rem;
+  height: 100%;
   background-color: var(--color-highlight-lightest);
+  transition-duration: $transitionDuration;
+  transition-property: background-color;
+
+  &:hover {
+    background-color: transparent;
+  }
 }
 
 .promo {

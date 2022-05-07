@@ -70,7 +70,7 @@ button.preview {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: var(--color-highlight-gradient);
+    background-color: var(--color-highlight-mosaic);
     opacity: 0.6;
     z-index: 0;
   }
@@ -83,6 +83,7 @@ button.preview {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  pointer-events: none;
   z-index: -1;
 }
 

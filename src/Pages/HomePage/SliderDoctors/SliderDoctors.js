@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import css from './SliderDoctors.module.scss'
 import { createSubArrays } from 'utils'
-import ButtonSlider from 'components/ButtonSlider/ButtonSlider'
 import Heading from 'components/Heading/Heading'
 import Container from 'components/Grid/Container'
 import Swiper from 'react-id-swiper'
@@ -15,34 +14,6 @@ import PropTypes from 'prop-types'
 
 const SliderDoctors = ({ title, list }) => {
   const [ activeTab, setActiveTab ] = useState(0)
-  const [swiper, setSwiper] = useState(null)
-  const [isBeginning, setSliderToBeginning] = useState(true)
-  const [isEnd, setSliderToEnd] = useState(false)
-
-
-  useEffect(() => {
-    if (swiper) {
-      swiper.on('slideChange', () => {
-        setActiveTab(0)
-        if (swiper.isEnd) setSliderToEnd(true)
-        if (!swiper.isEnd && isEnd) setSliderToEnd(false)
-        if (swiper.isBeginning) setSliderToBeginning(true)
-        if (!swiper.isBeginning && isBeginning) setSliderToBeginning(false)
-      })
-    }
-  }, [swiper, isEnd, isBeginning])
-
-  const goNext = () => {
-    if (swiper) {
-      swiper.slideNext()
-    }
-  }
-
-  const goPrev = () => {
-    if (swiper) {
-      swiper.slidePrev()
-    }
-  }
 
   const handleClickTab = index => {
     setActiveTab(index)
@@ -77,15 +48,17 @@ const SliderDoctors = ({ title, list }) => {
             {item.expertise}
           </p>
           {item.address && <address className={css.address} dangerouslySetInnerHTML={{__html: item.address}} />}
-          <blockquote className={css.quote}>
-            <IconQuotes className={css.iconQuote} />
-            <span dangerouslySetInnerHTML={{ __html: item.quote }} />
-          </blockquote>
+          {item?.quote && (
+            <blockquote className={css.quote}>
+              <IconQuotes className={css.iconQuote}/>
+              <span dangerouslySetInnerHTML={{__html: item.quote}}/>
+            </blockquote>
+          )}
           <Button
             className={css.btnAll}
             url={item.url}
             btnStyle='decorated'
-            label='Подробнее о враче'
+            label='Все врачи'
             handleClick={() => {}}
           />
         </figcaption>
@@ -117,10 +90,15 @@ const SliderDoctors = ({ title, list }) => {
               </button>
             </li>
           )
+          
           tabs.push(tab)
+          
           return (
-            <div className={css.tabContent} key={index}
-                 style={{display: activeTab === index ? 'block' : 'none'}}>
+            <div
+              style={{display: activeTab === index ? 'block' : 'none'}}
+              className={css.tabContent}
+              key={index}
+            >
               {slideContentArea(item, index)}
             </div>
           )
@@ -137,13 +115,9 @@ const SliderDoctors = ({ title, list }) => {
       <Container>
           <Heading content={title} />
           <div className={css.slider}>
-            <Swiper {...params} getSwiper={setSwiper}>
+            <Swiper {...params}>
               { sliderContent }
             </Swiper>
-            <div className={css.controls}>
-              <ButtonSlider type='prev' handleClick={goPrev} isDisabled={isBeginning} />
-              <ButtonSlider className={css.btnNext} type='next' handleClick={goNext} isDisabled={isEnd} />
-            </div>
           </div>
       </Container>
     </section>

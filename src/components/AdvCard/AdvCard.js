@@ -4,6 +4,7 @@ import css from './AdvCard.module.scss'
 import { Link } from 'react-router-dom'
 import IconArrowRight from 'assets/icons/IconArrowRight'
 import IconDotsBg from 'assets/icons/IconDotsBg'
+import { SPECIALS } from 'Pages/Routes'
 
 const AdvCard = ({
   type = 'teeth',
@@ -13,7 +14,8 @@ const AdvCard = ({
   title,
   price,
   styles,
-  isCompact
+  isCompact,
+  id
 }) => (
   <Link
     className={classnames(css.link, {
@@ -23,7 +25,7 @@ const AdvCard = ({
       [css.linkJaw]: type === 'implants-jaw',
       [css.compact]: isCompact
     })}
-    to={url}
+    to={`${SPECIALS}/${id}`}
     style={{ backgroundColor: color }}
   >
     <span className={css.duration}>

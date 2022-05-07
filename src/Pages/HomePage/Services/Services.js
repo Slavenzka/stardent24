@@ -6,6 +6,8 @@ import Heading from 'components/Heading/Heading'
 import Slider from 'components/SliderCards/SliderCards'
 import AdvCard from 'components/AdvCard/AdvCard'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { PRICES } from 'Pages/Routes'
 
 const Services = ({
   className,
@@ -56,8 +58,13 @@ const Services = ({
       >
       <ul className={css.sublist}>
         {item.sublist.map((subitem, subindex) => (
-          <li className={css.subitem} key={subindex}>
-            { subitem.text }
+          <li key={subindex}>
+            <Link
+              to={PRICES}
+              className={css.link}
+            >
+              { subitem.text }
+            </Link>
           </li>
         ))}
       </ul>

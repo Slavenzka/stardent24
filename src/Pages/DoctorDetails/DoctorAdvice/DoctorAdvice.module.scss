@@ -31,16 +31,30 @@
 }
 
 .card {
+  position: relative;
   width: 43.7rem;
 
   &:not(:first-child) {
     margin-left: 2.9rem;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5rem;
+    left: 3rem;
+    width: 43rem;
+    height: 35.1rem;
+    background-image: url("../../../assets/icons/doctor__photo-bg.svg");
+    background-size: cover;
+  }
 }
 
 .photo {
+  position: relative;
   width: 100%;
   height: 46.2rem;
+  z-index: 3;
 }
 
 .name {

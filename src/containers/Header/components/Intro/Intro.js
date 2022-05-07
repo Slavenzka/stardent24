@@ -26,26 +26,6 @@ const Intro = ({ className, data }) => (
         <IconClock className={css.iconClock} />
         <span className={css.label} dangerouslySetInnerHTML={{ __html: data.schedule }} />
       </div>
-      <button
-        className={css.search}
-        type='button'
-        onClick={() => {}}
-      >
-        <IconSearch className={css.iconSearch} />
-        <span className={css.label}>
-          Поиск
-        </span>
-      </button>
-      <button
-        className={css.colorMode}
-        type='button'
-        onClick={() => {}}
-      >
-        <IconEye className={css.iconEye} />
-        <span className={css.label}>
-          Для слабовидящих
-        </span>
-      </button>
     </Container>
   </div>
 )

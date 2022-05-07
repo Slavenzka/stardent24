@@ -9,6 +9,7 @@ import { decodeHTMLCharacters } from 'utils'
 import ButtonPlay from 'components/ButtonPlay/ButtonPlay'
 import { images, videos } from 'index'
 import { MAX_COMMENT_PREVIEW_LENGTH } from 'utils/const'
+import imageBlank from 'assets/images/stardent-review__blank.jpg'
 
 const Reviews = ({ title, list }) => {
   const [modal, setModalStatus] = useState({
@@ -36,7 +37,7 @@ const Reviews = ({ title, list }) => {
     setModalStatus({
       isVisible: true,
       content: (
-        <video className={css.video} muted autoPlay>
+        <video className={css.video} autoPlay>
           <source src={videos('./' + video)} />
         </video>
       )
@@ -59,7 +60,7 @@ const Reviews = ({ title, list }) => {
           <div className={css.contentText}>
             <div className={css.author}>
               <p className={css.name}>
-                {slide.name + ','}
+                {slide.name + ' '}
               </p>
               <span className={css.date}>
                 {slide.date}
@@ -91,12 +92,12 @@ const Reviews = ({ title, list }) => {
          {slide.video && !modal &&
           <ButtonPlay
             className={css.btnPlay}
-            background={`url("${images('./' + slide.preview)}")`}
+            background={slide.preview ? `url("${images('./' + slide.preview)}")` : null}
             handleClick={() => handlePlayVideo(slide.video)}
           />
          }
           {!slide.video && !modal &&
-            <img src={images('./' + slide.preview)} className={css.img} alt='Фотография респондента' />
+            <img src={imageBlank} className={css.img} alt='Фотография респондента' />
           }
         </div>
       )

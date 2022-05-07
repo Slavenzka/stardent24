@@ -34,7 +34,7 @@ const PricesCategory = ({
             }
           </>
         )}
-        cellValue={`${price} &#x20BD;`}
+        cellValue={price ? `${price} &#x20BD;` : null}
         index={rowIndex}
         key={`Price list row ${index}-${rowIndex}`}
       />
@@ -71,15 +71,15 @@ const PricesCategory = ({
         <ul className={css.list}>
           { items }
         </ul>
-        {sublist.length > 2 && shownItems.length < sublist.length &&
-          <ButtonShowMore
-            className={css.buttonShowMore}
-            clickHandler={() => updateShownItems(() => {
-              const newLength = shownItems.length + 1 >= sublist.length ? sublist.length : shownItems.length + 1
-              return sublist.slice(0, newLength)
-            })}
-          />
-        }
+        {/*{sublist.length > 2 && shownItems.length < sublist.length &&*/}
+        {/*  <ButtonShowMore*/}
+        {/*    className={css.buttonShowMore}*/}
+        {/*    clickHandler={() => updateShownItems(() => {*/}
+        {/*      const newLength = shownItems.length + 1 >= sublist.length ? sublist.length : shownItems.length + 1*/}
+        {/*      return sublist.slice(0, newLength)*/}
+        {/*    })}*/}
+        {/*  />*/}
+        {/*}*/}
       </Collapse>
     </>
   )

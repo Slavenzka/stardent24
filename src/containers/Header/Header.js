@@ -5,27 +5,25 @@ import { Link } from 'react-router-dom'
 import {
   ABOUT_CERTIFICATES, ABOUT_DOCUMENTS,
   ABOUT_FAQ,
-  ABOUT_US, ABOUT_VACANCIES, CONTACTS,
+  ABOUT_US, CONTACTS,
   DOCTORS,
   HOME_PAGE,
-  MEDIA_CENTER,
   PRICES, REVIEWS,
   SPECIALS
 } from 'Pages/Routes'
-import IconLogo from 'containers/Header/_assets/IconLogo'
 import DesktopMenu from './components/DesktopMenu/DesktopMenu'
 import Button from 'components/Button/Button'
 import Intro from 'containers/Header/components/Intro/Intro'
 import { useDispatch } from 'react-redux'
 import { openContentModal } from 'store/actions/ui'
-// import ModalAppointment from 'components/ModalAppointment/ModalAppointment'
 import ModalReview from 'components/ModalReview/ModalReview'
+import logo from 'assets/images/logo.png'
 
 const Header = () => {
   const headerData = {
     withSearch: true,
-    schedule: 'Ежедневно&nbsp;10.00&nbsp;&mdash; 21.00',
-    phones: ['+7 495 453 95 93', '+7 495 453 95 93'],
+    schedule: 'с&nbsp;9:00 до&nbsp;18:00, воскресенье&nbsp;&mdash; выходной',
+    phones: ['+7 (499) 136 87 77'],
     list: [
       {
         text: 'Услуги и цены',
@@ -38,10 +36,6 @@ const Header = () => {
       {
         text: 'Врачи',
         url: DOCTORS
-      },
-      {
-        text: 'Медиацентр',
-        url: MEDIA_CENTER
       },
       {
         text: 'О клинике',
@@ -61,10 +55,6 @@ const Header = () => {
           {
             text: 'Правовые документы',
             url: ABOUT_DOCUMENTS
-          },
-          {
-            text: 'Вакансии',
-            url: ABOUT_VACANCIES
           },
         ]
       },
@@ -96,7 +86,11 @@ const Header = () => {
       <Intro className={css.top} data={headerData} />
       <Container className={css.desktopWrapper}>
         <Link to={HOME_PAGE} className={css.logo}>
-          <IconLogo className={css.iconLogo} />
+          <img
+            className={css.iconLogo}
+            src={logo}
+            alt="Stardent24 logo"
+          />
         </Link>
         <DesktopMenu
           data={headerData}

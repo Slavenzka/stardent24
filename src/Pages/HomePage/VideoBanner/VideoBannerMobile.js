@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import ButtonPlayMobile from 'components/ButtonPlay/ButtonPlayMobile'
 import ButtonMobile from 'components/Button/ButtonMobile'
+import thumbnail from 'assets/images/video-banner__preview--adaptive.jpg'
 
 const VideoBannerMobile = ({
   top,
@@ -37,7 +38,7 @@ const VideoBannerMobile = ({
 
   return (
     <section>
-      <div className={css.bg} style={{ backgroundImage: background }} />
+      <div className={css.bg} style={{ backgroundImage: `url("${thumbnail}")` }} />
       <ContainerMobile className={css.top}>
         <ButtonPlayMobile
           className={css.play}

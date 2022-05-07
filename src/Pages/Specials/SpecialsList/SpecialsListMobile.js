@@ -20,7 +20,6 @@ const SpecialsListMobile = ({
       <ul className={classnames(css.list, className)}>
         { items }
       </ul>
-      <ButtonShowMore className={css.buttonMore} />
     </section>
   )
 }

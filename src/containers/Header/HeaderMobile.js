@@ -8,6 +8,7 @@ import IconSearch from 'assets/icons/IconSearch'
 import IconBurger from 'containers/Header/_assets/IconBurger'
 import AdaptiveMenu from './components/AdaptiveMenu/AdaptiveMenu'
 import ContainerMobile from 'components/Grid/ContainerMobile'
+import logo from 'assets/images/logo.png'
 
 const HeaderMobile = (props) => {
   const [isAdaptiveMenuVisible, setAdaptiveMenuStatus] = useState(false)
@@ -31,10 +32,6 @@ const HeaderMobile = (props) => {
         url: '/'
       },
       {
-        text: 'Медиацентр',
-        url: '/'
-      },
-      {
         text: 'О клинике',
         sublist: [
           {
@@ -51,10 +48,6 @@ const HeaderMobile = (props) => {
           },
           {
             text: 'Правовые документы',
-            url: '/'
-          },
-          {
-            text: 'Вакансии',
             url: '/'
           },
         ]
@@ -95,7 +88,11 @@ const HeaderMobile = (props) => {
       <ContainerMobile>
         <div className={css.wrapper}>
           <Link to={HOME_PAGE} className={css.logo}>
-            <IconLogo className={css.iconLogo} />
+            <img
+              className={css.iconLogo}
+              src={logo}
+              alt="Stardent24 logo"
+            />
           </Link>
           {withSearch &&
             <button className={css.search} type='button'>

@@ -37,7 +37,7 @@ const PricesCategoryMobile = ({
           </div>
         )}
         className={css.row}
-        cellValue={`${price} &#x20BD;`}
+        cellValue={price ? `${price} &#x20BD;` : null}
         index={rowIndex}
         key={`Price list row ${index}-${rowIndex}`}
       />

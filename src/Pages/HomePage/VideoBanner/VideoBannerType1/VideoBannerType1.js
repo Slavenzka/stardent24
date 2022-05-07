@@ -46,7 +46,7 @@ const VideoBannerType1 = ({ top, bottom }) => {
         </div>
       </Container>
       <div className={css.content}>
-        <video className={css.videoBg} muted='muted' autoPlay='autoplay' loop='loop' ref={videoBgRef} preload='preload'>
+        <video className={css.videoBg} muted autoPlay='autoplay' loop ref={videoBgRef} preload='preload' playsInline disablePictureInPicture>
           <source src={videos('./' + bottom.videoBg)} />
         </video>
         <Container className={css.container}>

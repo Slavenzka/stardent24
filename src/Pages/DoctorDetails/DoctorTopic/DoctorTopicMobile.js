@@ -60,13 +60,15 @@ const DoctorTopicMobile = ({
           >
             Показать все
           </button>
-          <div className={css.playWrapper}>
-            <ButtonPlay
-              className={css.play}
-              background={`url("${images('./' + topicData.video.preview)}")`}
-              handleClick={() => dispatch(openVideoModal(topicData.video.file))}
-            />
-          </div>
+          {topicData?.video && (
+            <div className={css.playWrapper}>
+              <ButtonPlay
+                className={css.play}
+                background={`url("${images('./' + topicData.video.preview)}")`}
+                handleClick={() => dispatch(openVideoModal(topicData.video.file))}
+              />
+            </div>
+          )}
         </div>
       )
     case 'education':

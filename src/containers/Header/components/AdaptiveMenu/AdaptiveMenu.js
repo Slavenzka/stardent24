@@ -125,15 +125,15 @@ const AdaptiveMenu = ({
             label='Записаться'
             handleClick={() => openAppointmentModal()}
           />
-          <button
-            className={css.switchColorsBtn}
-            // TODO create button click handler and switch color functionality
-            onClick={() => {}}
-            type='button'
-          >
-            <IconEye className={css.iconEye} />
-            Для слабовидящих
-          </button>
+          {/*<button*/}
+          {/*  className={css.switchColorsBtn}*/}
+          {/*  // TODO create button click handler and switch color functionality*/}
+          {/*  onClick={() => {}}*/}
+          {/*  type='button'*/}
+          {/*>*/}
+          {/*  <IconEye className={css.iconEye} />*/}
+          {/*  Для слабовидящих*/}
+          {/*</button>*/}
         </div>
         <nav>
           <ul className={css.list}>

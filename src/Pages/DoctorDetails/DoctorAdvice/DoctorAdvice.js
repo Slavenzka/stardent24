@@ -18,7 +18,7 @@ const DoctorAdvice = ({
           <p className={css.expertise}>
             { item.expertise }
           </p>
-          <p className={css.address} dangerouslySetInnerHTML={{ __html: item.location }} />
+          {item.location && <p className={css.address} dangerouslySetInnerHTML={{__html: item.location}}/>}
         </div>
       ))}
     </div>

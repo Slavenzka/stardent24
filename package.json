@@ -1,5 +1,5 @@
 {
-  "homepage": "http://slavenzka.github.io/health-adv",
+  "homepage": "http://slavenzka.github.io/stardent24",
   "name": "health-adv",
   "version": "0.1.0",
   "private": true,
@@ -46,6 +46,7 @@
   "devDependencies": {
     "body-scroll-lock": "3.0.2",
     "he": "^1.2.0",
+    "nanoid": "^3.3.3",
     "prop-types": "^15.7.2",
     "react-hook-form": "^5.7.2",
     "react-select": "^3.0.4",

@@ -24,8 +24,8 @@
   margin-top: 2.2rem;
   margin-left: calc(-1 * var(--padding-mobile));
   width: calc(100% + 2 * var(--padding-mobile));
-  height: 19rem;
-  object-fit: cover;
+  height: 15rem;
+  object-fit: contain;
 }
 
 @media (min-width: $widthTabletMin) {

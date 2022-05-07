@@ -104,12 +104,12 @@
 }
 
 .slide {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.4rem;
 
   .image {
-    &:not(:first-child) {
-      margin-left: 1.4rem;
-    }
+    width: 100%;
   }
 }
 

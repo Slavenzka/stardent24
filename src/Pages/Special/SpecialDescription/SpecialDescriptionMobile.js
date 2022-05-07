@@ -14,7 +14,7 @@ const SpecialDescriptionMobile = ({
     <section className={css.section}>
       <Heading content={title} type='standard' />
       <p className={css.duration} dangerouslySetInnerHTML={{ __html: encode(decode(duration)) }} />
-      <p className={css.descriptor} dangerouslySetInnerHTML={{ __html: encode(decode(description)) }} />
+      <p className={css.descriptor} dangerouslySetInnerHTML={{ __html: description}} />
       <img src={images('./' + image)} alt={title} className={css.image} />
     </section>
   )

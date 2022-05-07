@@ -18,15 +18,11 @@ const Footer = ({ className }) => {
         sublist: [
           [
             {
-              label: 'Стоматологическое лечение',
+              label: 'Консультация',
               url: '/'
             },
             {
-              label: 'Косметическая стоматология',
-              url: '/'
-            },
-            {
-              label: 'Детская стоматология',
+              label: 'Профилактика',
               url: '/'
             },
           ]
@@ -44,10 +40,6 @@ const Footer = ({ className }) => {
               label: 'Частые вопросы',
               url: '/'
             },
-            {
-              label: 'Лицензии и сертификаты',
-              url: '/'
-            },
           ],
           [
             {
@@ -55,7 +47,7 @@ const Footer = ({ className }) => {
               url: '/'
             },
             {
-              label: 'Вакансии',
+              label: 'Лицензии и сертификаты',
               url: '/'
             },
           ],
@@ -63,10 +55,6 @@ const Footer = ({ className }) => {
       },
       {
         list: [
-          {
-            label: 'Медиацентр',
-            url: '/'
-          },
           {
             label: 'Акции',
             url: '/'
@@ -106,14 +94,10 @@ const Footer = ({ className }) => {
     ],
     companyInfo: {
       startYear: '2008',
-      schedule: 'Ежедневно&nbsp;10.00&nbsp;&mdash; 21.00',
+      schedule: 'с&nbsp;9:00 до&nbsp;18:00, воскресенье&nbsp;&mdash; выходной',
     },
     siteInfo: {
       links: [
-        {
-          text: 'Карта сайта',
-          url: '/'
-        },
         {
           text: 'Политика конфиденциальности',
           url: '/'
