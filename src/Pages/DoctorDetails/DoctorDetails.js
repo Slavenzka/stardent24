@@ -40,7 +40,7 @@ const DoctorDetails = () => {
       <DoctorBanner
         breadcrumbs={breadcrumbs}
         data={doctorData.banner}
-        reviewsQuantity={reviews.data.list.length}
+        reviewsQuantity={reviews ? reviews.data.list.length : 0}
       />
       <Container>
         <ContentWithSidebar
