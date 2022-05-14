@@ -1,7 +1,6 @@
 import React from 'react'
 import css from './FaqList.module.scss'
 import Accordeon from 'components/Accordeon/Accordeon'
-import ButtonShowMore from 'components/ButtonShowMore/ButtonShowMore'
 
 const FaqList = ({
   list = []
@@ -27,7 +26,6 @@ const FaqList = ({
       <ul className={css.list}>
         { items }
       </ul>
-      <ButtonShowMore className={css.buttonMore} />
     </>
   )
 }
