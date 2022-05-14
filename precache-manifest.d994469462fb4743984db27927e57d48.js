@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a6b9cf03fd4d3702f67cf84987b0609f",
+    "revision": "5f176c66e0317545acee0b1d6f26c23c",
     "url": "/stardent24/index.html"
   },
   {
-    "revision": "03dee5fe6ced4f3a3976",
+    "revision": "e6f76e797111e2563062",
     "url": "/stardent24/static/css/2.0016a719.chunk.css"
   },
   {
-    "revision": "ad58b53e27a0fc58078a",
-    "url": "/stardent24/static/css/main.e765516b.chunk.css"
+    "revision": "d4ed4f6bd44c7745af88",
+    "url": "/stardent24/static/css/main.2d535ee4.chunk.css"
   },
   {
-    "revision": "03dee5fe6ced4f3a3976",
-    "url": "/stardent24/static/js/2.d5b57c0a.chunk.js"
+    "revision": "e6f76e797111e2563062",
+    "url": "/stardent24/static/js/2.2007e553.chunk.js"
   },
   {
     "revision": "bfd0f9ef773c39bd68987561c36447e9",
-    "url": "/stardent24/static/js/2.d5b57c0a.chunk.js.LICENSE.txt"
+    "url": "/stardent24/static/js/2.2007e553.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ad58b53e27a0fc58078a",
-    "url": "/stardent24/static/js/main.9a86860c.chunk.js"
+    "revision": "d4ed4f6bd44c7745af88",
+    "url": "/stardent24/static/js/main.024e363d.chunk.js"
   },
   {
     "revision": "e287cfe0332239252dca",

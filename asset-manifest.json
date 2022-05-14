@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/stardent24/static/css/main.e765516b.chunk.css",
-    "main.js": "/stardent24/static/js/main.9a86860c.chunk.js",
-    "main.js.map": "/stardent24/static/js/main.9a86860c.chunk.js.map",
+    "main.css": "/stardent24/static/css/main.2d535ee4.chunk.css",
+    "main.js": "/stardent24/static/js/main.024e363d.chunk.js",
+    "main.js.map": "/stardent24/static/js/main.024e363d.chunk.js.map",
     "runtime-main.js": "/stardent24/static/js/runtime-main.a3fff904.js",
     "runtime-main.js.map": "/stardent24/static/js/runtime-main.a3fff904.js.map",
     "static/css/2.0016a719.chunk.css": "/stardent24/static/css/2.0016a719.chunk.css",
-    "static/js/2.d5b57c0a.chunk.js": "/stardent24/static/js/2.d5b57c0a.chunk.js",
-    "static/js/2.d5b57c0a.chunk.js.map": "/stardent24/static/js/2.d5b57c0a.chunk.js.map",
+    "static/js/2.2007e553.chunk.js": "/stardent24/static/js/2.2007e553.chunk.js",
+    "static/js/2.2007e553.chunk.js.map": "/stardent24/static/js/2.2007e553.chunk.js.map",
     "index.html": "/stardent24/index.html",
-    "precache-manifest.3317caa8f2ac1f9bc409ba4c001f82ed.js": "/stardent24/precache-manifest.3317caa8f2ac1f9bc409ba4c001f82ed.js",
+    "precache-manifest.d994469462fb4743984db27927e57d48.js": "/stardent24/precache-manifest.d994469462fb4743984db27927e57d48.js",
     "service-worker.js": "/stardent24/service-worker.js",
     "static/css/2.0016a719.chunk.css.map": "/stardent24/static/css/2.0016a719.chunk.css.map",
-    "static/css/main.e765516b.chunk.css.map": "/stardent24/static/css/main.e765516b.chunk.css.map",
-    "static/js/2.d5b57c0a.chunk.js.LICENSE.txt": "/stardent24/static/js/2.d5b57c0a.chunk.js.LICENSE.txt",
+    "static/css/main.2d535ee4.chunk.css.map": "/stardent24/static/css/main.2d535ee4.chunk.css.map",
+    "static/js/2.2007e553.chunk.js.LICENSE.txt": "/stardent24/static/js/2.2007e553.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/stardent24/static/media/1.9989aa50.jpg",
     "static/media/10.jpg": "/stardent24/static/media/10.621d8b09.jpg",
     "static/media/11.jpg": "/stardent24/static/media/11.7a6a47a0.jpg",
@@ -156,8 +156,8 @@
   "entrypoints": [
     "static/js/runtime-main.a3fff904.js",
     "static/css/2.0016a719.chunk.css",
-    "static/js/2.d5b57c0a.chunk.js",
-    "static/css/main.e765516b.chunk.css",
-    "static/js/main.9a86860c.chunk.js"
+    "static/js/2.2007e553.chunk.js",
+    "static/css/main.2d535ee4.chunk.css",
+    "static/js/main.024e363d.chunk.js"
   ]
 }
