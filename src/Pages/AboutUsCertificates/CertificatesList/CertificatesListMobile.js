@@ -2,7 +2,6 @@ import React from 'react'
 import css from './CertificatesListMobile.module.scss'
 import classnames from 'classnames'
 import Document from 'components/Document/Document'
-import ButtonShowMoreMobile from 'components/ButtonShowMore/ButtonShowMoreMobile'
 
 const CertificatesListMobile = ({
   className,
@@ -19,7 +18,6 @@ const CertificatesListMobile = ({
       <ul className={classnames(css.list, className)}>
         { items }
       </ul>
-      <ButtonShowMoreMobile className={css.buttonMore} />
     </>
   )
 }

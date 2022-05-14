@@ -264,6 +264,11 @@ export const HOME_PAGE_DATA = {
         fullImage: 'certificate-1.jpg'
       },
       {
+        label: 'Санитарно-эпидемиологическое заключение',
+        previewImage: 'certificate-4.jpg',
+        fullImage: 'certificate-4.jpg'
+      },
+      {
         label: 'Свидетельство о постановке на учет в налоговом органе',
         previewImage: 'certificate-2.jpg',
         fullImage: 'certificate-2.jpg'
@@ -272,6 +277,16 @@ export const HOME_PAGE_DATA = {
         label: 'Сертификат специалиста Стоматология ортопедическая Харитонов А.И.',
         previewImage: 'certificate-3.jpg',
         fullImage: 'certificate-3.jpg'
+      },
+      {
+        label: 'Сертификат специалиста Стоматология хирургическая Харитонов А.И.',
+        previewImage: 'certificate-5.jpg',
+        fullImage: 'certificate-5.jpg'
+      },
+      {
+        label: 'Сертификат специалиста Стоматология терапевтическая Бозиева Ф.Н.',
+        previewImage: 'certificate-6.jpg',
+        fullImage: 'certificate-6.jpg'
       },
     ]
   }

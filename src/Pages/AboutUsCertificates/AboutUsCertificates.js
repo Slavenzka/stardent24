@@ -9,62 +9,9 @@ import TwoColumns from 'components/TwoColumns/TwoColumns'
 import AboutAside from 'components/AboutAside/AboutAside'
 import CertificatesList from 'Pages/AboutUsCertificates/CertificatesList/CertificatesList'
 import TestBanner from 'components/TestBanner/TestBanner'
+import { certificatesData } from 'Pages/AboutUsCertificates/_assets/data'
 
 const AboutUsCertificates = () => {
-  const certificatesData = {
-    banner: {
-      bgImage: 'certificates__banner@desktop.jpg',
-      title: 'Лицензии<br/>и сертификаты',
-    },
-    list: [
-      {
-        preview: 'license__preview.jpg',
-        full: 'license__full.jpg',
-        label: 'Приложение № 1 к лицензии № ФС-99-02-005179'
-      },
-      {
-        preview: 'license__preview.jpg',
-        full: 'license__full.jpg',
-        label: 'Приложение № 1 к лицензии № ФС-99-02-005179'
-      },
-      {
-        preview: 'license__preview.jpg',
-        full: 'license__full.jpg',
-        label: 'Приложение № 1 к лицензии № ФС-99-02-005179'
-      },
-      {
-        preview: 'license__preview.jpg',
-        full: 'license__full.jpg',
-        label: 'Приложение № 1 к лицензии № ФС-99-02-005179'
-      },
-      {
-        preview: 'license__preview.jpg',
-        full: 'license__full.jpg',
-        label: 'Приложение № 1 к лицензии № ФС-99-02-005179'
-      },
-      {
-        preview: 'license__preview.jpg',
-        full: 'license__full.jpg',
-        label: 'Приложение № 1 к лицензии № ФС-99-02-005179'
-      },
-      {
-        preview: 'license__preview.jpg',
-        full: 'license__full.jpg',
-        label: 'Приложение № 1 к лицензии № ФС-99-02-005179'
-      },
-      {
-        preview: 'license__preview.jpg',
-        full: 'license__full.jpg',
-        label: 'Приложение № 1 к лицензии № ФС-99-02-005179'
-      },
-      {
-        preview: 'license__preview.jpg',
-        full: 'license__full.jpg',
-        label: 'Приложение № 1 к лицензии № ФС-99-02-005179'
-      },
-    ]
-  }
-
   const breadcrumbs = [
     {
       label: 'Главная',
