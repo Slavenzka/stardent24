@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5f96dc32ceb2d274ddcf59ad53c57535",
+    "revision": "a6b9cf03fd4d3702f67cf84987b0609f",
     "url": "/stardent24/index.html"
   },
   {
-    "revision": "1ca3da848dd54cb8e495",
+    "revision": "03dee5fe6ced4f3a3976",
     "url": "/stardent24/static/css/2.0016a719.chunk.css"
   },
   {
-    "revision": "d4f1be787057a2aeff25",
-    "url": "/stardent24/static/css/main.bcae0c67.chunk.css"
+    "revision": "ad58b53e27a0fc58078a",
+    "url": "/stardent24/static/css/main.e765516b.chunk.css"
   },
   {
-    "revision": "1ca3da848dd54cb8e495",
-    "url": "/stardent24/static/js/2.b8d2fa2e.chunk.js"
+    "revision": "03dee5fe6ced4f3a3976",
+    "url": "/stardent24/static/js/2.d5b57c0a.chunk.js"
   },
   {
     "revision": "bfd0f9ef773c39bd68987561c36447e9",
-    "url": "/stardent24/static/js/2.b8d2fa2e.chunk.js.LICENSE.txt"
+    "url": "/stardent24/static/js/2.d5b57c0a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d4f1be787057a2aeff25",
-    "url": "/stardent24/static/js/main.93a55063.chunk.js"
+    "revision": "ad58b53e27a0fc58078a",
+    "url": "/stardent24/static/js/main.9a86860c.chunk.js"
   },
   {
     "revision": "e287cfe0332239252dca",
@@ -590,6 +590,38 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "aa03a35361224a5d01c7e19d4a46e565",
     "url": "/stardent24/static/media/specials__banner@desktop.aa03a353.jpg"
+  },
+  {
+    "revision": "6701490a8c92f38ebd865010c11e0b5e",
+    "url": "/stardent24/static/media/stardend24-about__bg.6701490a.jpg"
+  },
+  {
+    "revision": "a899a3ecf20074a061342028675b3faf",
+    "url": "/stardent24/static/media/stardend24-about__slide--1.a899a3ec.jpg"
+  },
+  {
+    "revision": "0c7ed36836c0c9a2ab574db348a5e827",
+    "url": "/stardent24/static/media/stardend24-about__slide--2.0c7ed368.jpg"
+  },
+  {
+    "revision": "3c6c71c56f1e1e79ec220f9293497481",
+    "url": "/stardent24/static/media/stardend24-about__slide--3.3c6c71c5.jpg"
+  },
+  {
+    "revision": "f91f34943e094c4799f01577249a3c44",
+    "url": "/stardent24/static/media/stardend24-about__slide--4.f91f3494.jpg"
+  },
+  {
+    "revision": "6c76e3b0ff52b742d5717b5237b8509e",
+    "url": "/stardent24/static/media/stardend24-about__slide--5.6c76e3b0.jpg"
+  },
+  {
+    "revision": "fbace9cbf41a915308d79b361f51a53e",
+    "url": "/stardent24/static/media/stardend24-about__slide--6.fbace9cb.jpg"
+  },
+  {
+    "revision": "1aad772e50ca77f93e4e77aca7f68ff1",
+    "url": "/stardent24/static/media/stardend24-about__slide--7.1aad772e.jpg"
   },
   {
     "revision": "d17bf53d2e17dd41e6e62cd0c57a5ca6",
