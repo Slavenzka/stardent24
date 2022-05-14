@@ -42,7 +42,7 @@ const DoctorDetailsMobile = () => {
       <DoctorBannerMobile
         breadcrumbs={breadcrumbs}
         data={doctorData.banner}
-        reviewsQuantity={reviews.data.list.length}
+        reviewsQuantity={reviews ? reviews.data.list.length : 0}
       />
       <ContainerMobile className={css.content}>
         <DoctorTopicsMobile
