@@ -1,7 +1,6 @@
 import React from 'react'
 import css from './DocumentsListMobile.module.scss'
 import classnames from 'classnames'
-import ButtonShowMoreMobile from 'components/ButtonShowMore/ButtonShowMoreMobile'
 import FileMobile from 'components/File/FileMobile'
 
 const DocumentsListMobile = ({
@@ -19,7 +18,6 @@ const DocumentsListMobile = ({
       <ul className={classnames(css.list, className)}>
         { items }
       </ul>
-      <ButtonShowMoreMobile className={css.buttonMore} />
     </>
   )
 }
