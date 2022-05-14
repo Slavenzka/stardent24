@@ -50,9 +50,11 @@ const ContactsCardMobile = ({
               </li>
             }
             {phone &&
-              <li className={classnames(css.item, css.itemPhone)}>
-                <IconPhone className={classnames(css.icon, css.iconPhone)} />
-                { phone }
+              <li>
+                <a className={classnames(css.item, css.itemEmail)} href={`tel:${phone}`}>
+                  <IconPhone className={classnames(css.icon, css.iconPhone)} />
+                  { phone }
+                </a>
               </li>
             }
             {mail &&
