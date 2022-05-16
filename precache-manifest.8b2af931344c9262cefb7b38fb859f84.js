@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0ab0eb576444e1cbf383d8082dbeaab",
+    "revision": "fbc2a5e62b326ef80d115de43711fa4c",
     "url": "/stardent24/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stardent24/static/css/2.0016a719.chunk.css"
   },
   {
-    "revision": "2c8a9376ec81ab33b53c",
+    "revision": "a638c868f8096d78c7ed",
     "url": "/stardent24/static/css/main.349588a4.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stardent24/static/js/2.e67d2687.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2c8a9376ec81ab33b53c",
-    "url": "/stardent24/static/js/main.b0f5b1b4.chunk.js"
+    "revision": "a638c868f8096d78c7ed",
+    "url": "/stardent24/static/js/main.30a1b884.chunk.js"
   },
   {
     "revision": "e287cfe0332239252dca",
