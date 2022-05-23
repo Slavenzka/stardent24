@@ -27,6 +27,7 @@ import ReviewsPageMobile from 'Pages/ReviewsPage/ReviewsPageMobile'
 import PricesMobile from 'Pages/Prices/PricesMobile'
 import ContactsMobile from 'Pages/Contacts/ContactsMobile'
 import Page404Mobile from 'Pages/Page404/Page404Mobile'
+import withModalMobile from 'hoc/withModalMobile'
 
 export const HOME_PAGE = '/'
 
@@ -58,4 +59,4 @@ class RoutesMobile extends PureComponent {
   }
 }
 
-export default RoutesMobile
+export default withModalMobile(RoutesMobile)

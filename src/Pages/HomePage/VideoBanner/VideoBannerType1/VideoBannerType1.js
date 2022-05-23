@@ -7,11 +7,15 @@ import { images, videos } from 'index'
 import IconDots from 'assets/icons/IconDots'
 import Button from 'components/Button/Button'
 import Modal from 'components/Modal/Modal'
+import { openContentModal } from 'store/actions/ui'
+import ModalAppointment from 'components/ModalAppointment/ModalAppointment'
+import { useDispatch } from 'react-redux'
 
 const VideoBannerType1 = ({ top, bottom }) => {
   const videoRef = useRef(null)
   const videoBgRef = useRef(null)
   const [isModalVisible, setModalVisibilityStatus] = useState(false)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     // reset video playtime in modal when it opens
@@ -66,7 +70,7 @@ const VideoBannerType1 = ({ top, bottom }) => {
             <Button
               btnStyle='gradient'
               type='button'
-              handleClick={() => {}}
+              handleClick={() => dispatch(openContentModal(<ModalAppointment />))}
               label='Записаться'
             />
           </div>

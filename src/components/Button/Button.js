@@ -4,6 +4,7 @@ import css from './Button.module.scss'
 import IconArrowRight from 'assets/icons/IconArrowRight'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import IconSpinner from 'assets/icons/IconSpinner'
 
 const Button = ({
   className,
@@ -12,7 +13,8 @@ const Button = ({
   btnStyle = 'filled',
   label = '',
   handleClick,
-  type = 'button'
+  type = 'button',
+  isLoading
 }) => {
   const ComponentName = url ? Link : 'button'
 
@@ -22,16 +24,20 @@ const Button = ({
         [css.buttonFilled]: btnStyle === 'filled',
         [css.buttonDecorated]: btnStyle === 'decorated' || btnStyle === 'filledDecorated',
         [css.buttonGradient]: btnStyle === 'gradient',
-        [css.buttonFilledDecorated]: btnStyle === 'filledDecorated'
+        [css.buttonFilledDecorated]: btnStyle === 'filledDecorated',
+        [css.buttonLoading]: isLoading
       })}
       type={url ? '' : type}
       to={url}
       onClick={url ? () => {} : handleClick}
     >
       { label }
-      {btnStyle !== 'filled' &&
+      {btnStyle !== 'filled' && !isLoading &&
         <IconArrowRight className={classnames(css.icon, iconClassname)} />
       }
+      {isLoading && (
+        <IconSpinner className={css.spinner} />
+      )}
     </ComponentName>
   )
 }

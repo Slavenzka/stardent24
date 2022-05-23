@@ -35,7 +35,6 @@ const ReviewsPage = () => {
     <>
       <Banner
         {...reviewsData.banner}
-        extraBlock={bannerLink}
       />
       <Container className={css.container}>
         <Breadcrumbs dataArray={breadcrumbs} />

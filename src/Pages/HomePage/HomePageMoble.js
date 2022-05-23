@@ -7,7 +7,6 @@ import AboutMobile from 'Pages/HomePage/About/AboutMobile'
 import ReviewsMobile from 'Pages/HomePage/Reviews/ReviewsMobile'
 import AdvantagesMobile from 'Pages/HomePage/Advantages/AdvantagesMobile'
 import LicenseMobile from 'Pages/HomePage/License/LicenseMobile'
-import withModalMobile from 'hoc/withModalMobile'
 import { HOME_PAGE_DATA } from 'Pages/HomePage/_assets/data'
 
 const HomePageMobile  = () => {
@@ -30,4 +29,4 @@ const HomePageMobile  = () => {
   )
 }
 
-export default React.memo(withModalMobile(HomePageMobile))
+export default React.memo(HomePageMobile)

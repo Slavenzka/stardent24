@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import css from './ModalAppointment.module.scss'
 import classnames from 'classnames'
 import { images } from 'index'
@@ -7,12 +7,36 @@ import Heading from 'components/Heading/Heading'
 import IconLock from 'assets/icons/IconLock'
 import Input from 'components/Input/Input'
 import Button from 'components/Button/Button'
+import { useDispatch } from 'react-redux'
+import { closeModal } from 'store/actions/ui'
 
 const ModalAppointment = ({
   isWithImage = true
 }) => {
   const { register, handleSubmit, errors } = useForm()
-  const onSubmit = data => console.log(data)
+  const [isFetching, setFetching] = useState(false)
+  const dispatch = useDispatch()
+  
+  const onSubmit = useCallback(data => {
+    setFetching(true)
+    
+    const {
+      [`modal-appointment-name`]: name,
+      [`modal-appointment-phone`]: phone
+    } = data
+    
+    fetch(`/mail.php`, {
+      method: `POST`,
+      body: JSON.stringify({
+        name,
+        phone
+      })
+    })
+      .then(() => {
+        setFetching(false)
+        dispatch(closeModal())
+      })
+  }, [dispatch])
 
   return (
     <div className={classnames(css.wrapper, { [css.wrapperIllustrated]: isWithImage })}>
@@ -25,38 +49,40 @@ const ModalAppointment = ({
           Оставьте заявку, мы свяжемся с вами в течение часа
         </p>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <fieldset className={css.fieldset}>
-            <Input
-              name='modal-appointment-name'
-              placeholder='Имя*'
-              registration={register({ required: true, minLength: 3, pattern: /^[а-яА-Я]+$/ })}
-              inputPalette='light'
-            />
-            {errors['modal-appointment-name'] &&
-            <p className={css.error}>
-              Пожалуйста, введите имя, состоящее не менее, чем из трех букв
-            </p>
-            }
-          </fieldset>
-          <fieldset className={css.fieldset}>
-            <Input
-              name='modal-appointment-phone'
-              placeholder='Телефон*'
-              registration={register({ required: true, minLength: 10, pattern: /^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$/im })}
-              inputPalette='light'
-            />
-            {errors['modal-appointment-phone'] &&
+          <div className={css.form}>
+            <fieldset className={css.fieldset}>
+              <Input
+                name='modal-appointment-name'
+                placeholder='Имя*'
+                registration={register({ required: true, minLength: 3, pattern: /^[а-яА-Я]+$/ })}
+                inputPalette='light'
+              />
+              {errors['modal-appointment-name'] &&
               <p className={css.error}>
-                Пожалуйста, убедитесь, что введенный телефонный номер содержит не менее 10 знаков и не включает посторонних символов
+                Пожалуйста, введите имя, состоящее не менее, чем из трех букв
               </p>
-            }
-          </fieldset>
+              }
+            </fieldset>
+            <fieldset className={css.fieldset}>
+              <Input
+                name='modal-appointment-phone'
+                placeholder='Телефон*'
+                registration={register({ required: true, minLength: 10, pattern: /^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$/im })}
+                inputPalette='light'
+              />
+              {errors['modal-appointment-phone'] &&
+                <p className={css.error}>
+                  Пожалуйста, убедитесь, что введенный телефонный номер содержит не менее 10 знаков и не включает посторонних символов
+                </p>
+              }
+            </fieldset>
+          </div>
           <Button
             className={css.button}
             label='Записаться'
             btnStyle='decorated'
-            handleClick={() => {}}
             type='submit'
+            isLoading={isFetching}
           />
         </form>
         <p className={css.acceptance}>
