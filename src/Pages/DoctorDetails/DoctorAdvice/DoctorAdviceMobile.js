@@ -2,13 +2,19 @@ import React from 'react'
 import css from './DoctorAdviceMobile.module.scss'
 import { images } from 'index'
 import SliderCardsMobile from 'components/SliderCards/SliderCardsMobile'
+import { DOCTORS } from 'Pages/Routes'
+import { Link } from 'react-router-dom'
 
 const DoctorAdviceMobile = ({
   list
 }) => {
-  const slides = list.map((slide, index) => (
+  const slides = list.map(({id, ...slide}, index) => (
     <div className={css.slide} key={`Doctor advice slide#${index}`}>
-      <div className={css.card} key={`Doctor advice card ${index}`}>
+      <Link
+        to={`${DOCTORS}/${id}`}
+        className={css.card}
+        key={`Doctor advice card ${index}`}
+      >
         <img src={images('./' + slide.photo)} className={css.photo} alt={`Фото ${slide.name}`} />
         <p className={css.name}>
           { slide.name }
@@ -17,7 +23,7 @@ const DoctorAdviceMobile = ({
           { slide.expertise }
         </p>
         <p className={css.address} dangerouslySetInnerHTML={{ __html: slide.location }} />
-      </div>
+      </Link>
     </div>
   ))
 

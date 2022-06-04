@@ -123,6 +123,8 @@ const DoctorTopicMobile = ({
           </h3>
           <SliderCardsMobile
             className={css.slider}
+            freeMode={false}
+            autoHeight
           >
             {topicData.list.map((slide, index) => (
               <div className={css.slide} key={`Doc slider item#${index}`}>

@@ -176,9 +176,11 @@
 
   .slide {
     display: flex;
-    width: max-content;
+    width: 100%;
 
     .image {
+      width: 100%;
+
       &:not(:first-child) {
         margin-left: 1.4rem;
       }

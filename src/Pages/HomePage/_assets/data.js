@@ -137,7 +137,7 @@ export const HOME_PAGE_DATA = {
         color: 'rgb(51, 131, 251)',
         duration: 'Акция до 1 января',
         title: 'Имплантация доступно! Все включено.',
-        price: '<span>6 000</span> рублей за все'
+        price: '<span>60 000</span> рублей за все'
       },
       {
         type: 'teeth',
@@ -152,8 +152,8 @@ export const HOME_PAGE_DATA = {
   },
   reviewBanner: {
     bgImages: {
-      mobile: 'stardent24__review-banner.jpg',
-      tablet: 'stardent24__review-banner.jpg',
+      mobile: 'stardent24__review-banner--mobile.jpg',
+      tablet: 'stardent24__review-banner--mobile.jpg',
       desktop: 'stardent24__review-banner.jpg'
     },
     quote: 'Всем, кто боится стоматологов, рекомендую посетить Стардент и&nbsp;вы&nbsp;забудете, что такое страх!',

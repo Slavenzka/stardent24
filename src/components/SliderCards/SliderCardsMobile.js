@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import css from './SliderCardsMobile.module.scss'
 import classnames from 'classnames'
 import Swiper from 'react-id-swiper'
@@ -6,20 +6,12 @@ import 'swiper/css/swiper.min.css'
 import PropTypes from 'prop-types'
 
 const SliderCardsMobile = ({
-   className,
-   children,
-   freeMode = true
+  className,
+  children,
+  freeMode = true,
+  isLoop,
+  ...props
  }) => {
-  const [swiper, setSwiper] = useState(null)
-
-  useEffect(() => {
-    if (swiper) {
-      swiper.on('resize', () => {
-        swiper.slides.css('width', '')
-      })
-    }
-  }, [swiper])
-
   // swiper settings
   const params = {
     slidesPerView: 'auto',
@@ -29,12 +21,12 @@ const SliderCardsMobile = ({
       el: '.swiper-pagination',
       type: 'progressbar',
     },
-    getSwiper: setSwiper
+    loop: isLoop
   }
 
   return (
     <div className={classnames(css.wrapper, className)}>
-      <Swiper {...params}>
+      <Swiper {...params} {...props}>
         { children }
       </Swiper>
     </div>

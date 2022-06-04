@@ -2,9 +2,10 @@
 @import "styles/mixins";
 
 .bg {
-  height: 12rem;
-  background-size: contain;
+  height: 15rem;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .container {
@@ -17,10 +18,15 @@
 }
 
 .quote {
-  @include h4($colorMainBg);
-
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: $colorMainBg;
+  letter-spacing: -1px;
 }
 
 .author {
