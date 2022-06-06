@@ -9,6 +9,18 @@ import IconInstagram from 'assets/icons/IconInstagram'
 import IconLogoCreator from 'assets/icons/IconLogoCreator'
 // import { YMInitializer } from 'react-yandex-metrika'
 import { Link } from 'react-router-dom'
+import IconTelegram from 'assets/icons/IconTelegram'
+import {
+  ABOUT_CERTIFICATES,
+  ABOUT_DOCUMENTS,
+  ABOUT_FAQ,
+  ABOUT_US,
+  CONTACTS,
+  DOCTORS,
+  POLICY, PRICES,
+  REVIEWS,
+  SPECIALS
+} from 'Pages/Routes'
 
 const Footer = ({ className }) => {
   const footerData = {
@@ -19,11 +31,11 @@ const Footer = ({ className }) => {
           [
             {
               label: 'Консультация',
-              url: '/'
+              url: PRICES
             },
             {
               label: 'Профилактика',
-              url: '/'
+              url: PRICES
             },
           ]
         ]
@@ -34,21 +46,21 @@ const Footer = ({ className }) => {
           [
             {
               label: 'О нас',
-              url: '/'
+              url: ABOUT_US
             },
             {
               label: 'Частые вопросы',
-              url: '/'
+              url: ABOUT_FAQ
             },
           ],
           [
             {
               label: 'Правовые документы',
-              url: '/'
+              url: ABOUT_DOCUMENTS
             },
             {
               label: 'Лицензии и сертификаты',
-              url: '/'
+              url: ABOUT_CERTIFICATES
             },
           ],
         ]
@@ -57,39 +69,31 @@ const Footer = ({ className }) => {
         list: [
           {
             label: 'Акции',
-            url: '/'
+            url: SPECIALS
           },
           {
             label: 'Врачи',
-            url: '/'
+            url: DOCTORS
           },
           {
             label: 'Контакты',
-            url: '/'
+            url: CONTACTS
           },
           {
             label: 'Отзывы',
-            url: '/'
+            url: REVIEWS
           },
         ]
       }
     ],
     social: [
       {
-        type: 'facebook',
-        url: '/'
+        type: 'telegram',
+        url: 'https://t.me/stardent24'
       },
       {
         type: 'vk',
-        url: '/'
-      },
-      {
-        type: 'twitter',
-        url: '/'
-      },
-      {
-        type: 'instagram',
-        url: '/'
+        url: 'https://vk.com/stardent24'
       },
     ],
     companyInfo: {
@@ -100,7 +104,7 @@ const Footer = ({ className }) => {
       links: [
         {
           text: 'Политика конфиденциальности',
-          url: '/'
+          url: POLICY
         },
       ]
     }
@@ -158,13 +162,20 @@ const Footer = ({ className }) => {
           case 'instagram':
             icon = <IconInstagram className={css.iconSocial} />
             break
+          case 'telegram':
+            icon = <IconTelegram className={css.iconSocial} />
+            break
           default:
             return null
         }
 
         return (
           <li className={css.socialItem} key={index}>
-            <a className={css.socialLink} href={item.url}>
+            <a
+              className={css.socialLink}
+              href={item.url}
+              target="_blank" rel="noopener norefferer"
+            >
               { icon }
               {`Мы в ${item.type}`}
             </a>
@@ -220,12 +231,12 @@ const Footer = ({ className }) => {
           <ul className={css.auxList}>
             { siteInfoLinks }
           </ul>
-          <div className={css.counter}>
-            <div className={css.metrics}>
-              Some counter
-              {/*<YMInitializer accounts={[31337]} options={{webvisor: true}} version='2' />*/}
-            </div>
-          </div>
+          {/*<div className={css.counter}>*/}
+          {/*  <div className={css.metrics}>*/}
+          {/*    Some counter*/}
+          {/*    /!*<YMInitializer accounts={[31337]} options={{webvisor: true}} version='2' />*!/*/}
+          {/*  </div>*/}
+          {/*</div>*/}
           <p
             className={css.timeline}
             dangerouslySetInnerHTML={{ __html: `&copy;${footerData.companyInfo.startYear} - ${new Date().getFullYear()}` }}

@@ -3,7 +3,7 @@ import {
   ABOUT_DOCUMENTS,
   ABOUT_FAQ,
   ABOUT_US, CONTACTS,
-  DOCTORS,
+  DOCTORS, POLICY,
   PRICES,
   REVIEWS,
   SPECIALS
@@ -58,12 +58,8 @@ export const headerData = {
   ],
   auxList: [
     {
-      text: 'Карта сайта',
-      url: '/'
-    },
-    {
       text: 'Политика конфиденциальности',
-      url: '/'
+      url: POLICY
     }
   ]
 }

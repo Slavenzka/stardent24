@@ -6,8 +6,8 @@ import IconVK from 'assets/icons/IconVK'
 import IconTwitter from 'assets/icons/IconTwitter'
 import IconInstagram from 'assets/icons/IconInstagram'
 import IconLogoCreator from 'assets/icons/IconLogoCreator'
-// import { YMInitializer } from 'react-yandex-metrika'
 import ContainerMobile from 'components/Grid/ContainerMobile'
+import IconTelegram from 'assets/icons/IconTelegram'
 
 const FooterMobile = ({ className }) => {
   const footerData = {
@@ -87,20 +87,12 @@ const FooterMobile = ({ className }) => {
     ],
     social: [
       {
-        type: 'facebook',
-        url: '/'
+        type: 'telegram',
+        url: 'https://t.me/stardent24'
       },
       {
         type: 'vk',
-        url: '/'
-      },
-      {
-        type: 'twitter',
-        url: '/'
-      },
-      {
-        type: 'instagram',
-        url: '/'
+        url: 'https://vk.com/stardent24'
       },
     ],
     companyInfo: {
@@ -125,7 +117,7 @@ const FooterMobile = ({ className }) => {
     <ul className={css.socialList}>
       {footerData.social.map((item, index) => {
         let icon
-
+  
         switch (item.type) {
           case 'facebook':
             icon = <IconFacebook className={css.iconSocial} />
@@ -138,6 +130,9 @@ const FooterMobile = ({ className }) => {
             break
           case 'instagram':
             icon = <IconInstagram className={css.iconSocial} />
+            break
+          case 'telegram':
+            icon = <IconTelegram className={css.iconSocial} />
             break
           default:
             return null
@@ -172,12 +167,12 @@ const FooterMobile = ({ className }) => {
               <IconLogoCreator className={css.logo} />
             </a>
           </div>
-          <div className={css.counter}>
-            <div className={css.metrics}>
-              Some counter
-              {/*<YMInitializer accounts={[31337]} options={{webvisor: true}} version='2' />*/}
-            </div>
-          </div>
+          {/*<div className={css.counter}>*/}
+          {/*  <div className={css.metrics}>*/}
+          {/*    Some counter*/}
+          {/*    /!*<YMInitializer accounts={[31337]} options={{webvisor: true}} version='2' />*!/*/}
+          {/*  </div>*/}
+          {/*</div>*/}
           <p
             className={css.timeline}
             dangerouslySetInnerHTML={{ __html: `&copy;${footerData.companyInfo.startYear} - ${new Date().getFullYear()}` }}

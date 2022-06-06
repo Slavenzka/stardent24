@@ -144,7 +144,7 @@ const AdaptiveMenu = ({
           <ul className={css.auxList}>
             {data.auxList.map((item, index) => (
               <li className={css.auxItem} key={index}>
-                <Link className={css.auxLink} to={item.url} onClick={() => alert(`Clicked`)}>
+                <Link className={css.auxLink} to={item.url} onClick={handleClose}>
                   { item.text }
                 </Link>
               </li>

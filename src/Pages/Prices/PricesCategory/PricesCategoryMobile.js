@@ -1,23 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import css from './PricesCategoryMobile.module.scss'
 import { useDispatch } from 'react-redux'
 import { openVideoModal } from 'store/actions'
 import { Collapse } from 'react-collapse/lib/Collapse'
 import classnames from 'classnames'
 import TableRowMobile from 'components/TableRow/TableRowMobile'
-import ButtonShowMoreMobile from 'components/ButtonShowMore/ButtonShowMoreMobile'
 import ButtonPlayMobile from 'components/ButtonPlay/ButtonPlayMobile'
 
 const PricesCategoryMobile = ({
   category,
   sublist,
-  isOpened
+  isOpened,
+  onUncollapse,
+  addObserver
 }) => {
   const dispatch = useDispatch()
   const [isCollapseOpened, updateCollapseStatus] = useState(isOpened)
-  const [shownItems, updateShownItems] = useState(sublist.length <= 2 ? sublist : sublist.slice(0, 2))
-
-  const items = shownItems.map(({ subcategory, services }, index) => {
+  
+  useEffect(() => {
+    addObserver(() => updateCollapseStatus(false))
+  }, [addObserver])
+  
+  const items = sublist.map(({ subcategory, services }, index) => {
     const serviceItems = services.map(({ label, video, price }, rowIndex) => (
       <TableRowMobile
         keyClassName={css.rowKey}
@@ -66,7 +70,10 @@ const PricesCategoryMobile = ({
           { [css.collapseButtonOpened]: isCollapseOpened }
         )}
         type='button'
-        onClick={() => updateCollapseStatus(state => !state)}
+        onClick={() => {
+          onUncollapse && onUncollapse()
+          updateCollapseStatus(state => !state)
+        }}
       >
         { category }
       </button>
@@ -74,15 +81,6 @@ const PricesCategoryMobile = ({
         <ul className={css.list}>
           { items }
         </ul>
-        {sublist.length > 2 && shownItems.length < sublist.length &&
-          <ButtonShowMoreMobile
-            className={css.buttonShowMore}
-            clickHandler={() => updateShownItems(() => {
-              const newLength = shownItems.length + 1 >= sublist.length ? sublist.length : shownItems.length + 1
-              return sublist.slice(0, newLength)
-            })}
-          />
-        }
       </Collapse>
     </>
   )

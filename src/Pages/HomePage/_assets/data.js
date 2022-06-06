@@ -132,20 +132,35 @@ export const HOME_PAGE_DATA = {
     ads: [
       {
         type: 'implants-jaw',
-        url: SPECIALS,
         id: 0,
         color: 'rgb(51, 131, 251)',
-        duration: 'Акция до 1 января',
+        duration: 'Всё лето',
         title: 'Имплантация доступно! Все включено.',
-        price: '<span>60 000</span> рублей за все'
+        price: '<span>35 000</span> рублей'
       },
       {
         type: 'teeth',
-        url: SPECIALS,
+        url: `${SPECIALS}/1`,
         id: 1,
         color: '#f4785d',
         duration: 'До конца года',
         title: 'Профессиональная чистка зубов',
+        price: '<span>5 000</span> рублей'
+      },
+      {
+        type: 'teeth',
+        id: 2,
+        color: '#58c775',
+        duration: 'Всё лето',
+        title: 'Гигиеническая чистка зубов',
+        price: '<span>5 000</span> рублей'
+      },
+      {
+        type: 'teeth',
+        id: 3,
+        color: '#9a4da1',
+        duration: 'Всё лето',
+        title: 'Пломба',
         price: '<span>5 000</span> рублей'
       },
     ]

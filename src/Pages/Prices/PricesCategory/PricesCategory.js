@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import css from './PricesCategory.module.scss'
 import TableRow from 'components/TableRow/TableRow'
 import ButtonPlay from 'components/ButtonPlay/ButtonPlay'
@@ -6,19 +6,23 @@ import { useDispatch } from 'react-redux'
 import { openVideoModal } from 'store/actions'
 import { Collapse } from 'react-collapse/lib/Collapse'
 import classnames from 'classnames'
-import ButtonShowMore from 'components/ButtonShowMore/ButtonShowMore'
 
 const PricesCategory = ({
   category,
   sublist,
-  isOpened
+  isOpened,
+  addObserver,
+  onUncollapse
 }) => {
   const dispatch = useDispatch()
   const [isCollapseOpened, updateCollapseStatus] = useState(isOpened)
-  const [shownItems, updateShownItems] = useState(sublist.length <= 2 ? sublist : sublist.slice(0, 2))
+  
+  useEffect(() => {
+    addObserver(() => updateCollapseStatus(false))
+  }, [addObserver])
 
-  const items = shownItems.map(({ subcategory, services }, index) => {
-    const serviceItems = services.map(({ label, video, price }, rowIndex) => (
+  const items = sublist.map(({ subcategory, services }, index) => {
+    const serviceItems = services.map(({ label, video, price, min }, rowIndex) => (
       <TableRow
         cellKey={(
           <>
@@ -34,7 +38,10 @@ const PricesCategory = ({
             }
           </>
         )}
-        cellValue={price ? `${price} &#x20BD;` : null}
+        cellValue={price
+          ? !Number.isNaN(+price) ? `${min ? `от ` : ``}${(+price).toLocaleString(`ru`)} &#x20BD;` : price
+          : null
+      }
         index={rowIndex}
         key={`Price list row ${index}-${rowIndex}`}
       />
@@ -63,7 +70,10 @@ const PricesCategory = ({
           { [css.collapseButtonOpened]: isCollapseOpened }
         )}
         type='button'
-        onClick={() => updateCollapseStatus(state => !state)}
+        onClick={() => {
+          onUncollapse && onUncollapse()
+          updateCollapseStatus(state => !state)
+        }}
       >
         { category }
       </button>
