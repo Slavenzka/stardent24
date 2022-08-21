@@ -90,6 +90,11 @@
   }
 }
 
+.buttonDisabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 @media (max-width: $widthTabletMax) {
   .button{
     &.buttonDecorated {

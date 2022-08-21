@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import css from './ModalAppointment.module.scss'
 import classnames from 'classnames'
 import { images } from 'index'
@@ -7,13 +7,37 @@ import Heading from 'components/Heading/Heading'
 import IconLock from 'assets/icons/IconLock'
 import Input from 'components/Input/Input'
 import Button from 'components/Button/Button'
+import { useDispatch } from 'react-redux'
+import { closeModal } from 'store/actions'
 
 const ModalAppointment = ({
   isWithImage = true
 }) => {
   const { register, handleSubmit, errors } = useForm()
-  const onSubmit = data => console.log(data)
-
+  const [isFetching, setFetching] = useState(false)
+  const dispatch = useDispatch()
+  
+  const onSubmit = useCallback(data => {
+    setFetching(true)
+    
+    const {
+      [`modal-appointment-name`]: name,
+      [`modal-appointment-phone`]: phone
+    } = data
+    
+    fetch(`/mail.php`, {
+      method: `POST`,
+      body: JSON.stringify({
+        name,
+        phone
+      })
+    })
+      .then(() => {
+        setFetching(false)
+        dispatch(closeModal())
+      })
+  }, [dispatch])
+  
   return (
     <div className={classnames(css.wrapper, { [css.wrapperIllustrated]: isWithImage })}>
       {isWithImage &&
@@ -55,8 +79,8 @@ const ModalAppointment = ({
             className={css.button}
             label='Записаться'
             btnStyle='decorated'
-            handleClick={() => {}}
             type='submit'
+            isLoading={isFetching}
           />
         </form>
         <p className={css.acceptance}>

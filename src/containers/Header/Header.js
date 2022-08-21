@@ -16,8 +16,8 @@ import Button from 'components/Button/Button'
 import Intro from 'containers/Header/components/Intro/Intro'
 import { useDispatch } from 'react-redux'
 import { openContentModal } from 'store/actions/ui'
-import ModalReview from 'components/ModalReview/ModalReview'
 import logo from 'assets/images/logo.png'
+import ModalAppointment from 'components/ModalAppointment/ModalAppointment'
 
 const Header = () => {
   const headerData = {
@@ -100,7 +100,7 @@ const Header = () => {
             label='Записаться'
             btnStyle='decorated'
             handleClick={() => {
-              dispatch(openContentModal(<ModalReview />))}
+              dispatch(openContentModal(<ModalAppointment />))}
             }
           />
         </div>

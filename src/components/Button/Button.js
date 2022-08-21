@@ -12,7 +12,8 @@ const Button = ({
   btnStyle = 'filled',
   label = '',
   handleClick,
-  type = 'button'
+  type = 'button',
+  isLoading
 }) => {
   const ComponentName = url ? Link : 'button'
 
@@ -22,7 +23,8 @@ const Button = ({
         [css.buttonFilled]: btnStyle === 'filled',
         [css.buttonDecorated]: btnStyle === 'decorated' || btnStyle === 'filledDecorated',
         [css.buttonGradient]: btnStyle === 'gradient',
-        [css.buttonFilledDecorated]: btnStyle === 'filledDecorated'
+        [css.buttonFilledDecorated]: btnStyle === 'filledDecorated',
+        [css.buttonDisabled]: isLoading
       })}
       type={url ? '' : type}
       to={url}

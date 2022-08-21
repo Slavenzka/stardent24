@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css'
 import 'styles/common.scss'
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import * as serviceWorker from './serviceWorker';
@@ -30,9 +30,9 @@ export const files = require.context('assets/files', true)
 
 const Content = (
   <Provider store={store}>
-    <HashRouter basename='/'>
+    <BrowserRouter>
       <ViewSwitcher />
-    </HashRouter>
+    </BrowserRouter>
   </Provider>
 )
 

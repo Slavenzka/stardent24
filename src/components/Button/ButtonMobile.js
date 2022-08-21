@@ -11,7 +11,8 @@ const ButtonMobile = ({
   url,
   btnStyle = 'filled',
   label = '',
-  handleClick = () => {}
+  handleClick = () => {},
+  isLoading
 }) => {
   const ComponentName = url ? Link : 'button'
 
@@ -21,7 +22,8 @@ const ButtonMobile = ({
         [css.buttonFilled]: btnStyle === 'filled',
         [css.buttonDecorated]: btnStyle === 'decorated' || btnStyle === 'filledDecorated',
         [css.buttonGradient]: btnStyle === 'gradient',
-        [css.buttonFilledDecorated]: btnStyle === 'filledDecorated'
+        [css.buttonFilledDecorated]: btnStyle === 'filledDecorated',
+        [css.buttonDisabled]: isLoading
       })}
       type={url ? '' : 'button'}
       to={url}
