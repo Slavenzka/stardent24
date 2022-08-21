@@ -8,7 +8,7 @@ import {
   ARTICLE, CONTACTS,
   DOCTORS,
   MEDIA_ARTICLE,
-  MEDIA_CENTER, PRICES, REVIEWS,
+  MEDIA_CENTER, POLICY, PRICES, REVIEWS,
   SPECIALS
 } from 'Pages/Routes'
 import MediacenterMobile from 'Pages/Mediacenter/MediacenterMobile'
@@ -27,6 +27,8 @@ import ReviewsPageMobile from 'Pages/ReviewsPage/ReviewsPageMobile'
 import PricesMobile from 'Pages/Prices/PricesMobile'
 import ContactsMobile from 'Pages/Contacts/ContactsMobile'
 import Page404Mobile from 'Pages/Page404/Page404Mobile'
+import withModalMobile from 'hoc/withModalMobile'
+import Policy from 'Pages/Policy/Policy'
 
 export const HOME_PAGE = '/'
 
@@ -52,10 +54,11 @@ class RoutesMobile extends PureComponent {
         <Route exact path={REVIEWS} component={ReviewsPageMobile} />
         <Route exact path={PRICES} component={PricesMobile} />
         <Route exact path={CONTACTS} component={ContactsMobile} />
+        <Route exact path={POLICY} component={Policy} />
         <Route component={Page404Mobile} />
       </Switch>
     )
   }
 }
 
-export default RoutesMobile
+export default withModalMobile(RoutesMobile)

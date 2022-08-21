@@ -5,7 +5,6 @@ import Container from 'components/Grid/Container'
 import { HOME_PAGE } from 'Pages/Routes'
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs'
 import PromoBlock from 'containers/PromoBlock/PromoBlock'
-import TestBanner from 'components/TestBanner/TestBanner'
 import PricesContent from 'Pages/Prices/PricesContent/PricesContent'
 import withModal from 'hoc/withModal'
 import { useDispatch } from 'react-redux'
@@ -46,7 +45,6 @@ const Prices = () => {
           <PricesContent className={css.content} />
         </section>
       </Container>
-      <TestBanner />
     </>
   )
 }

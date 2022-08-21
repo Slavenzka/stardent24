@@ -3,46 +3,12 @@ import css from './Contacts.module.scss'
 import Container from 'components/Grid/Container'
 import { HOME_PAGE } from 'Pages/Routes'
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs'
-import Heading from 'components/Heading/Heading'
 import ContactsTabs from 'Pages/Contacts/ContactsTabs/ContactsTabs'
 import Banner from 'components/Banner/Banner'
 import MapComponent from 'components/Map/Map'
-import SignupBanner from 'components/SignupBanner/SignupBanner'
-import ContactForm from 'components/SignupBanner/ContactForm/ContactForm'
-import IconLock from 'assets/icons/IconLock'
-import { Link } from 'react-router-dom'
+import { contactsData } from 'Pages/Contacts/_assets/data'
 
 const Contacts = () => {
-  const contactsData = {
-    banner: {
-      bgImage: 'contacts__banner@desktop.jpg',
-      title: 'Контакты',
-      descriptor: 'Выбирайте подходящую клинику рядом с&nbsp;домом или работой, и&nbsp;записывайтесь на&nbsp;приём.',
-    },
-    title: 'Филиалы клиники',
-    list: [
-      {
-        name: 'Клиника Patterson Dental 1',
-        city: 'Москва',
-        address: '1 - 105062, Москва, 1-й Бабьегородский пер., д. 28',
-        coords: [55.799769, 37.677028],
-        schedule: 'Ежедневно с 10.00 до 21.00',
-        phone: '+7 (495) 453 95 93',
-        mail: 'info@inzhsys.ru',
-        gallery: [
-          {
-            img: 'about__gallery-item@desktop.jpg',
-            label: 'Подпись к фотографии'
-          },
-        ]
-      },
-    ],
-    mapSettings: {
-      zoom: 8,
-      center: [55.126557, 38.750870]
-    }
-  }
-
   const breadcrumbs = [
     {
       label: 'Главная',
@@ -83,17 +49,6 @@ const Contacts = () => {
       <MapComponent
         {...contactsData.mapSettings}
         marks={pins}
-      />
-      <SignupBanner
-        title='Остались вопросы?'
-        descriptor='Мы ответим на все интересующие вопросы и поможем в любых даже сложных случаях'
-        noWarning={true}
-        specialFormComponent={<ContactForm
-          warning={<p className={css.warning}>
-            <IconLock className={css.iconLock} />
-            Нажимая на кнопку, я соглашаюсь на обработку персональных данных, с <Link className={css.link} to='/'>политикой</Link> ознакомлен
-          </p>}
-        />}
       />
     </>
   )

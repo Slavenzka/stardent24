@@ -1,0 +1,39 @@
+@import "styles/mixins";
+
+.wrapper {
+  padding-top: 7rem;
+  padding-bottom: 3.5rem;
+}
+
+.heading {
+  & + .list {
+    margin-top: 2rem;
+
+    & > .item {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.list {
+  list-style: none;
+  counter-reset: block;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  @include regular(var(--color-font-main));
+
+  &::before {
+    counter-increment: block;
+    content: counters(block, ".") ".";
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: $widthTabletMax) {
+  .wrapper {
+    padding-top: 10rem;
+  }
+}

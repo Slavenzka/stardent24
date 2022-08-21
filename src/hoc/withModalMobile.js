@@ -9,6 +9,7 @@ const withModalMobile = (WrappedComponent) => {
     const modal = useSelector(state => state.ui)
     const dispatch = useDispatch();
     const videoRef = useRef(null)
+    console.log(modal)
 
     useEffect(() => {
       // reset video playtime in modal when it opens

@@ -5,12 +5,16 @@ import { Collapse } from 'react-collapse/lib/Collapse'
 import Button from 'components/Button/Button'
 import CollapseTriggerMobile from 'components/CollapseTrigger/CollapseTriggerMobile'
 import PropTypes from 'prop-types'
+import { openContentModal } from 'store/actions/ui'
+import ModalAppointmentMobile from 'components/ModalAppointment/ModalAppointmentMobile'
+import { useDispatch } from 'react-redux'
 
 const AccordeonListMobile = ({
   className,
   list
 }) => {
   const [activeTab, setActiveTab] = useState(null)
+  const dispatch = useDispatch()
 
   const handleClickTrigger = index => {
     setActiveTab(activeTab === index ? null : index)
@@ -36,7 +40,7 @@ const AccordeonListMobile = ({
           onClick={() => {}}
           label='Записаться'
           className={css.btn}
-          handleClick={() => {}}
+          handleClick={() => dispatch(openContentModal(<ModalAppointmentMobile />))}
         />
       </Collapse>
     </li>

@@ -60,17 +60,6 @@
     top: 0;
     left: 0;
     width: 100vw;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: var(--color-font-main);
-      opacity: 0.1;
-    }
   }
 
   .wrapper {
@@ -79,10 +68,6 @@
 
   .headerTabletTransparent {
     background-color: transparent;
-
-    &::before {
-      background-color: $colorMainBg;
-    }
 
     .iconLogo,
     .iconSearch,

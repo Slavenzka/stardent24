@@ -7,7 +7,7 @@ const CALCULATION_DURATION = 500
 const StatsCounterMobile = ({
   counterData
 }) => {
-  const { key, unit, value } = counterData
+  const { key, unit, value, step = 1 } = counterData
   const [isCounterActive, updateCounterStatus] = useState(false)
   const [counter, updateCounter] = useState({
     value: 0,
@@ -28,7 +28,7 @@ const StatsCounterMobile = ({
           clearInterval(counter)
         }
 
-        value += 1
+        value = Math.round((value + step) * 10) / 10
       }, CALCULATION_DURATION / key)
     }
 

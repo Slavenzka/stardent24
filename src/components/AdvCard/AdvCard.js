@@ -4,7 +4,6 @@ import css from './AdvCard.module.scss'
 import { Link } from 'react-router-dom'
 import IconArrowRight from 'assets/icons/IconArrowRight'
 import IconDotsBg from 'assets/icons/IconDotsBg'
-import { SPECIALS } from 'Pages/Routes'
 
 const AdvCard = ({
   type = 'teeth',
@@ -15,34 +14,43 @@ const AdvCard = ({
   price,
   styles,
   isCompact,
-  id
-}) => (
-  <Link
-    className={classnames(css.link, {
-      [css.thin]: styles === 'thin',
-      [css.linkTeeth]: type === 'teeth',
-      [css.linkImplant]: type === 'implant-single',
-      [css.linkJaw]: type === 'implants-jaw',
-      [css.compact]: isCompact
-    })}
-    to={`${SPECIALS}/${id}`}
-    style={{ backgroundColor: color }}
-  >
+}) => {
+  const WrapperTag = url
+    ? Link
+    : `div`
+  
+  const extraProps = url
+    ? {
+      to: url
+    }
+    : {}
+  
+  return (
+    <WrapperTag
+      className={classnames(css.link, {
+        [css.thin]: styles === 'thin',
+        [css.linkTeeth]: type === 'teeth',
+        [css.linkImplant]: type === 'implant-single',
+        [css.linkJaw]: type === 'implants-jaw',
+        [css.compact]: isCompact
+      })}
+      style={{ backgroundColor: color }}
+      {...extraProps}
+    >
     <span className={css.duration}>
       { duration }
     </span>
-    <p className={css.title} dangerouslySetInnerHTML={{ __html: title }} />
-    <span className={css.price} dangerouslySetInnerHTML={{ __html: price }} />
-    <IconDotsBg className={css.bg} />
-    {!isCompact &&
-      <>
+      <p className={css.title} dangerouslySetInnerHTML={{ __html: title }} />
+      <span className={css.price} dangerouslySetInnerHTML={{ __html: price }} />
+      <IconDotsBg className={css.bg} />
+      {!isCompact && url &&
         <span className={css.label}>
           Подробнее
           <IconArrowRight className={css.icon} />
         </span>
-      </>
-    }
-  </Link>
-)
+      }
+    </WrapperTag>
+  )
+}
 
 export default React.memo(AdvCard)

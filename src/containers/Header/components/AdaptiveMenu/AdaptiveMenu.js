@@ -4,7 +4,6 @@ import classnames from 'classnames'
 import IconClose from 'containers/Header/_assets/IconClose'
 import IconClock from 'assets/icons/IconClock'
 import Button from 'components/Button/Button'
-import IconEye from 'containers/Header/_assets/IconEye'
 import { Link } from 'react-router-dom'
 import { Collapse } from 'react-collapse/lib/Collapse'
 import IconArrow from 'containers/Header/_assets/IconArrow'
@@ -34,6 +33,7 @@ const AdaptiveMenu = ({
   })
 
   const openAppointmentModal = () => {
+    handleClose && handleClose()
     dispatch(openContentModal(<ModalAppointmentMobile />))
   }
 
@@ -76,7 +76,7 @@ const AdaptiveMenu = ({
               {
                 item.sublist.map((subitem, index) => (
                   <li className={css.subitem} key={index}>
-                    <Link to={subitem.url} className={css.sublink}>
+                    <Link to={subitem.url} className={css.sublink} onClick={handleClose}>
                       { subitem.text }
                     </Link>
                   </li>
@@ -90,7 +90,7 @@ const AdaptiveMenu = ({
 
     return (
       <li className={css.item} key={index}>
-        <Link to={item.url} className={css.link}>
+        <Link to={item.url} className={css.link} onClick={handleClose}>
           { item.text }
         </Link>
       </li>
@@ -144,7 +144,7 @@ const AdaptiveMenu = ({
           <ul className={css.auxList}>
             {data.auxList.map((item, index) => (
               <li className={css.auxItem} key={index}>
-                <Link className={css.auxLink} to={item.url}>
+                <Link className={css.auxLink} to={item.url} onClick={handleClose}>
                   { item.text }
                 </Link>
               </li>

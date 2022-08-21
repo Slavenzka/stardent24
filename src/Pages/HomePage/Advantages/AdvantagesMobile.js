@@ -7,7 +7,7 @@ import classnames from 'classnames'
 import ContainerMobile from 'components/Grid/ContainerMobile'
 import { useSelector } from 'react-redux'
 
-const AdvantagesMobile = ({ title = 'Преймущества', list }) => {
+const AdvantagesMobile = ({ title = 'Преимущества', list }) => {
   const [isCollapseOpened, setCollapseOpened] = useState(false)
   const type = useSelector(state => state.elastic.deviceType)
 

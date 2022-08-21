@@ -45,9 +45,7 @@ const AccordeonMobile = ({
         className={css.key}
       >
         <>
-          <span>
-            { question }
-          </span>
+          <span dangerouslySetInnerHTML={{ __html: question}} />
           { background &&
           <img
             className={css.background}

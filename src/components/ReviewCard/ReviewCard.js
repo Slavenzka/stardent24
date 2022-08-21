@@ -35,7 +35,7 @@ const ReviewCard = (props) => {
   return (
     <article className={classnames(css.card, { [css.cardModal]: isModal })}>
       <p className={css.name}>
-        { `${name}, ${date}` }
+        { date ? `${name}, ${date}` : name }
       </p>
       <p className={css.text} dangerouslySetInnerHTML={{ __html: isModal ? text : pureText }} />
       {isButtonRequired &&

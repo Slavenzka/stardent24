@@ -1,6 +1,5 @@
 import React from 'react'
 import css from './FaqListMobile.module.scss'
-import ButtonShowMoreMobile from 'components/ButtonShowMore/ButtonShowMoreMobile'
 import AccordeonMobile from 'components/Accordeon/AccordeonMobile'
 import classnames from 'classnames'
 
@@ -29,7 +28,6 @@ const FaqListMobile = ({
       <ul className={classnames(css.list, className)}>
         { items }
       </ul>
-      <ButtonShowMoreMobile className={css.buttonMore} />
     </>
   )
 }

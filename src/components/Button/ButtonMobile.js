@@ -4,6 +4,7 @@ import css from './ButtonMobile.module.scss'
 import IconArrowRight from 'assets/icons/IconArrowRight'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import IconSpinner from 'assets/icons/IconSpinner'
 
 const ButtonMobile = ({
   className,
@@ -23,16 +24,19 @@ const ButtonMobile = ({
         [css.buttonDecorated]: btnStyle === 'decorated' || btnStyle === 'filledDecorated',
         [css.buttonGradient]: btnStyle === 'gradient',
         [css.buttonFilledDecorated]: btnStyle === 'filledDecorated',
-        [css.buttonDisabled]: isLoading
+        [css.buttonLoading]: isLoading
       })}
       type={url ? '' : 'button'}
       to={url}
       onClick={url ? () => {} : handleClick}
     >
       { label }
-      {btnStyle !== 'filled' &&
+      {btnStyle !== 'filled' && !isLoading &&
         <IconArrowRight className={classnames(css.icon, iconClassname)} />
       }
+      {isLoading && (
+        <IconSpinner className={css.spinner} />
+      )}
     </ComponentName>
   )
 }

@@ -7,8 +7,8 @@ import Heading from 'components/Heading/Heading'
 import IconLock from 'assets/icons/IconLock'
 import InputMobile from 'components/Input/InputMobile'
 import ButtonMobile from 'components/Button/ButtonMobile'
-import { useDispatch } from 'react-redux'
 import { closeModal } from 'store/actions'
+import { useDispatch } from 'react-redux'
 
 const ModalAppointmentMobile = ({
   isWithImage = true

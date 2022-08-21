@@ -38,7 +38,7 @@ const BlockPrinciplesMobile = ({
         className={classnames(css.buttonCollapse, { [css.buttonCollapseOpened]: isCollapseOpened })}
         onClick={() => updateCollapseStatus(true)}
       >
-        Еще преймущества
+        Еще преимущества
         <IconArrow className={css.iconArrow} />
       </button>
     </section>

@@ -5,9 +5,9 @@ import { Waypoint } from 'react-waypoint'
 const CALCULATION_DURATION = 500
 
 const StatsCounter = ({
-  counterData
+  counterData,
 }) => {
-  const { key, unit, value } = counterData
+  const { key, unit, value, step = 1 } = counterData
   const [isCounterActive, updateCounterStatus] = useState(false)
   const [counter, updateCounter] = useState({
     value: 0,
@@ -28,7 +28,7 @@ const StatsCounter = ({
           clearInterval(counter)
         }
 
-        value += 1
+        value = Math.round((step + value) * 10) / 10
       }, CALCULATION_DURATION / key)
     }
 
@@ -38,7 +38,7 @@ const StatsCounter = ({
       triggerStatCalculation(counter)
     }
     return clearInterval(counter)
-  }, [isCounterActive, key])
+  }, [isCounterActive, key, step])
 
   return (
     <Waypoint

@@ -3,11 +3,13 @@ import css from './VideoBannerMobile.module.scss'
 import { images, videos } from 'index'
 import ModalMobile from 'components/Modal/ModalMobile'
 import ContainerMobile from 'components/Grid/ContainerMobile'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import ButtonPlayMobile from 'components/ButtonPlay/ButtonPlayMobile'
 import ButtonMobile from 'components/Button/ButtonMobile'
 import thumbnail from 'assets/images/video-banner__preview--adaptive.jpg'
+import { openContentModal } from 'store/actions/ui'
+import ModalAppointmentMobile from 'components/ModalAppointment/ModalAppointmentMobile'
 
 const VideoBannerMobile = ({
   top,
@@ -16,6 +18,7 @@ const VideoBannerMobile = ({
   const videoRef = useRef(null)
   const [isModalVisible, setModalVisibilityStatus] = useState(false)
   const type = useSelector(state => state.elastic.deviceType)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     // reset video playtime in modal when it opens
@@ -59,7 +62,9 @@ const VideoBannerMobile = ({
               type='button'
               onClick={() => {}}
               label='Записаться'
-              handleClick={() => {}}
+              handleClick={() => {
+                dispatch(openContentModal(<ModalAppointmentMobile />))
+              }}
             />
           </div>
         </ContainerMobile>

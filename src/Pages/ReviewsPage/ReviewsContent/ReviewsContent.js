@@ -21,7 +21,7 @@ const ReviewsContent = ({ list }) => {
               handleClick={() => {}}
             />
             <p className={css.name}>
-              { `${item.client}, ${item.date}` }
+              { item?.date ? `${item.client}, ${item.date}` : item.client }
             </p>
             <dl className={css.doctor}>
               <dt className={css.doctorInfo}>

@@ -5,7 +5,9 @@
 .button {
   @include resetButton;
 
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   text-align: center;
   transition-duration: 0.3s;
@@ -132,7 +134,20 @@
   }
 }
 
-.buttonDisabled {
+.buttonLoading {
   pointer-events: none;
   opacity: 0.5;
+}
+
+.spinner {
+  margin-left: 1rem;
+  width: 1.6rem;
+
+  circle {
+    fill: var(--color-highlight-buttons);
+  }
+
+  path {
+    stroke: var(--color-highlight-buttons);
+  }
 }

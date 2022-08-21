@@ -2,83 +2,17 @@ import React from 'react'
 import css from './Header.module.scss'
 import Container from 'components/Grid/Container'
 import { Link } from 'react-router-dom'
-import {
-  ABOUT_CERTIFICATES, ABOUT_DOCUMENTS,
-  ABOUT_FAQ,
-  ABOUT_US, CONTACTS,
-  DOCTORS,
-  HOME_PAGE,
-  PRICES, REVIEWS,
-  SPECIALS
-} from 'Pages/Routes'
+import { HOME_PAGE } from 'Pages/Routes'
 import DesktopMenu from './components/DesktopMenu/DesktopMenu'
 import Button from 'components/Button/Button'
 import Intro from 'containers/Header/components/Intro/Intro'
 import { useDispatch } from 'react-redux'
 import { openContentModal } from 'store/actions/ui'
 import logo from 'assets/images/logo.png'
+import { headerData } from 'containers/Header/_assets/data'
 import ModalAppointment from 'components/ModalAppointment/ModalAppointment'
 
 const Header = () => {
-  const headerData = {
-    withSearch: true,
-    schedule: 'с&nbsp;9:00 до&nbsp;18:00, воскресенье&nbsp;&mdash; выходной',
-    phones: ['+7 (499) 136 87 77'],
-    list: [
-      {
-        text: 'Услуги и цены',
-        url: PRICES
-      },
-      {
-        text: 'Акции',
-        url: SPECIALS
-      },
-      {
-        text: 'Врачи',
-        url: DOCTORS
-      },
-      {
-        text: 'О клинике',
-        sublist: [
-          {
-            text: 'О нас',
-            url: ABOUT_US
-          },
-          {
-            text: 'Частые вопросы',
-            url: ABOUT_FAQ
-          },
-          {
-            text: 'Лицензии и сертификаты',
-            url: ABOUT_CERTIFICATES
-          },
-          {
-            text: 'Правовые документы',
-            url: ABOUT_DOCUMENTS
-          },
-        ]
-      },
-      {
-        text: 'Отзывы',
-        url: REVIEWS
-      },
-      {
-        text: 'Контакты',
-        url: CONTACTS
-      },
-    ],
-    auxList: [
-      {
-        text: 'Карта сайта',
-        url: '/'
-      },
-      {
-        text: 'Политика конфиденциальности',
-        url: '/'
-      }
-    ]
-  }
-
   const dispatch = useDispatch()
 
   return (

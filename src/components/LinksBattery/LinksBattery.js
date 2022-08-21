@@ -6,7 +6,6 @@ import {
   ABOUT_DOCUMENTS,
   ABOUT_FAQ,
   ABOUT_US,
-  ABOUT_VACANCIES
 } from 'Pages/Routes'
 import classnames from 'classnames'
 
@@ -27,10 +26,6 @@ const LinksBattery = (props) => {
     {
       label: 'Правовые документы',
       url: ABOUT_DOCUMENTS
-    },
-    {
-      label: 'Вакансии',
-      url: ABOUT_VACANCIES
     },
   ]
 

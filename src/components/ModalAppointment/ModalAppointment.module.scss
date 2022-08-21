@@ -28,18 +28,18 @@
   margin: 1.8rem 0 0 0;
 }
 
+.form {
+  display: grid;
+  grid-template-rows: repeat(2, 6rem);
+  grid-gap: 2rem;
+  margin-top: 3.6rem;
+}
+
 .fieldset {
   margin: 0;
   padding: 0;
+  height: 100%;
   border: none;
-
-  &:first-child {
-    margin-top: 3.6rem;
-  }
-
-  &:not(:first-child) {
-    margin-top: 2rem;
-  }
 }
 
 .button {
@@ -63,5 +63,5 @@
 .error {
   @include small(red);
 
-  margin: 1rem 0 0 0;
+  margin: 0.1rem 0 0 0;
 }

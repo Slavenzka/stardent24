@@ -48,7 +48,7 @@ export const HOME_PAGE_DATA = {
         ]
       },
       {
-        category: 'Конусльтация',
+        category: 'Консультация',
         sublist: [
           {
             text: 'Прием (осмотр,консультация) врача-стоматолога первичный'
@@ -132,28 +132,43 @@ export const HOME_PAGE_DATA = {
     ads: [
       {
         type: 'implants-jaw',
-        url: SPECIALS,
         id: 0,
         color: 'rgb(51, 131, 251)',
-        duration: 'Акция до 1 января',
+        duration: 'Всё лето',
         title: 'Имплантация доступно! Все включено.',
-        price: '<span>6 000</span> рублей за все'
+        price: '<span>35 000</span> рублей'
       },
       {
         type: 'teeth',
-        url: SPECIALS,
+        url: `${SPECIALS}/1`,
         id: 1,
         color: '#f4785d',
         duration: 'До конца года',
         title: 'Профессиональная чистка зубов',
         price: '<span>5 000</span> рублей'
       },
+      {
+        type: 'teeth',
+        id: 2,
+        color: '#58c775',
+        duration: 'Всё лето',
+        title: 'Гигиеническая чистка зубов',
+        price: '<span>5 000</span> рублей'
+      },
+      {
+        type: 'teeth',
+        id: 3,
+        color: '#9a4da1',
+        duration: 'Всё лето',
+        title: 'Пломба',
+        price: '<span>5 000</span> рублей'
+      },
     ]
   },
   reviewBanner: {
     bgImages: {
-      mobile: 'stardent24__review-banner.jpg',
-      tablet: 'stardent24__review-banner.jpg',
+      mobile: 'stardent24__review-banner--mobile.jpg',
+      tablet: 'stardent24__review-banner--mobile.jpg',
       desktop: 'stardent24__review-banner.jpg'
     },
     quote: 'Всем, кто боится стоматологов, рекомендую посетить Стардент и&nbsp;вы&nbsp;забудете, что такое страх!',
@@ -239,7 +254,8 @@ export const HOME_PAGE_DATA = {
     ]
   },
   advantages: {
-    title: 'Преймущества',
+    title: 'Преимущества',
+    title: 'Преимущества',
     list: [
       {
         subtitle: 'Гарантии',
@@ -264,6 +280,11 @@ export const HOME_PAGE_DATA = {
         fullImage: 'certificate-1.jpg'
       },
       {
+        label: 'Санитарно-эпидемиологическое заключение',
+        previewImage: 'certificate-4.jpg',
+        fullImage: 'certificate-4.jpg'
+      },
+      {
         label: 'Свидетельство о постановке на учет в налоговом органе',
         previewImage: 'certificate-2.jpg',
         fullImage: 'certificate-2.jpg'
@@ -272,6 +293,16 @@ export const HOME_PAGE_DATA = {
         label: 'Сертификат специалиста Стоматология ортопедическая Харитонов А.И.',
         previewImage: 'certificate-3.jpg',
         fullImage: 'certificate-3.jpg'
+      },
+      {
+        label: 'Сертификат специалиста Стоматология хирургическая Харитонов А.И.',
+        previewImage: 'certificate-5.jpg',
+        fullImage: 'certificate-5.jpg'
+      },
+      {
+        label: 'Сертификат специалиста Стоматология терапевтическая Бозиева Ф.Н.',
+        previewImage: 'certificate-6.jpg',
+        fullImage: 'certificate-6.jpg'
       },
     ]
   }
