@@ -25,7 +25,7 @@ export const contactsData = {
     },
   ],
   mapSettings: {
-    zoom: 13,
+    zoom: 15,
     center: [55.611953, 37.729700]
   }
 }

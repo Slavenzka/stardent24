@@ -15,7 +15,7 @@ const ContactForm = ({ buttonLabel = 'Отправить', warning }) => {
           <Input
             className={css.input}
             type='text'
-            name='subscribeName'
+            name='name'
             placeholder='Имя*'
             registration={register({ required: true })}
             isError={errors.subscribeName}
@@ -25,7 +25,7 @@ const ContactForm = ({ buttonLabel = 'Отправить', warning }) => {
           <Input
             className={css.input}
             type='email'
-            name='subscribeMail'
+            name='email'
             placeholder='E-mail*'
             registration={register({ required: true })}
             isError={errors.subscribeMail}
@@ -33,7 +33,7 @@ const ContactForm = ({ buttonLabel = 'Отправить', warning }) => {
         </fieldset>
         <textarea
           ref={register({ required: true })}
-          name='userComment'
+          name='comment'
           className={css.text}
           placeholder='Комменатрий*'
         />

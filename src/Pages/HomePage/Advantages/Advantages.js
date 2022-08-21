@@ -3,7 +3,7 @@ import css from './Advantages.module.scss'
 import Container from 'components/Grid/Container'
 import Heading from 'components/Heading/Heading'
 
-const Advantages = ({ title = 'Преймущества', list }) => {
+const Advantages = ({ title = 'Преимущества', list }) => {
 
   const listItems = list.map((item, index) => (
     <li className={css.item} key={item.subtitle + '-' + index}>

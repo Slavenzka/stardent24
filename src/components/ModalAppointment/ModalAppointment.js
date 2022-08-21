@@ -25,12 +25,13 @@ const ModalAppointment = ({
       [`modal-appointment-phone`]: phone
     } = data
     
+    const formData = new FormData()
+    formData.append(`name`, name)
+    formData.append(`phone`, phone)
+    
     fetch(`/mail.php`, {
       method: `POST`,
-      body: JSON.stringify({
-        name,
-        phone
-      })
+      body: formData
     })
       .then(() => {
         setFetching(false)

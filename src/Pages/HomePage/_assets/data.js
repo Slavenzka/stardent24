@@ -48,7 +48,7 @@ export const HOME_PAGE_DATA = {
         ]
       },
       {
-        category: 'Конусльтация',
+        category: 'Консультация',
         sublist: [
           {
             text: 'Прием (осмотр,консультация) врача-стоматолога первичный'
@@ -254,7 +254,8 @@ export const HOME_PAGE_DATA = {
     ]
   },
   advantages: {
-    title: 'Преймущества',
+    title: 'Преимущества',
+    title: 'Преимущества',
     list: [
       {
         subtitle: 'Гарантии',

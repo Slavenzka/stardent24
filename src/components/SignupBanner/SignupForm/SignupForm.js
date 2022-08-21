@@ -14,7 +14,7 @@ const SignupForm = ({ buttonLabel }) => {
         <fieldset className={css.fieldset}>
           <Input
             type='text'
-            name='subscribeName'
+            name='name'
             placeholder='Имя*'
             registration={register({ required: true })}
             isError={errors.subscribeName}
@@ -23,7 +23,7 @@ const SignupForm = ({ buttonLabel }) => {
         <fieldset className={css.fieldset}>
           <Input
             type='email'
-            name='subscribeMail'
+            name='email'
             placeholder='E-mail*'
             registration={register({ required: true })}
             isError={errors.subscribeMail}

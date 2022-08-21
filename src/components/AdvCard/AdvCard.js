@@ -4,7 +4,6 @@ import css from './AdvCard.module.scss'
 import { Link } from 'react-router-dom'
 import IconArrowRight from 'assets/icons/IconArrowRight'
 import IconDotsBg from 'assets/icons/IconDotsBg'
-import { SPECIALS } from 'Pages/Routes'
 
 const AdvCard = ({
   type = 'teeth',
