@@ -255,7 +255,6 @@ export const HOME_PAGE_DATA = {
   },
   advantages: {
     title: 'Преимущества',
-    title: 'Преимущества',
     list: [
       {
         subtitle: 'Гарантии',
